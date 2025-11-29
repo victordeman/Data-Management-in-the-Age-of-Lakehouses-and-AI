@@ -14,3 +14,13 @@
 .text-secondary-600 {
     color: rgb(4, 120, 87); /* Equivalent to emerald-600 */
 }
+
+/* Additional styles for new elements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list-disc li a:hover {
+    text-decoration: underline;
+}

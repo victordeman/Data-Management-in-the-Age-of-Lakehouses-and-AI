@@ -8,6 +8,8 @@ class CustomFooter extends HTMLElement {
                         <a href="#" class="hover:text-secondary-500">Privacy Policy</a>
                         <a href="#" class="hover:text-secondary-500">Terms of Use</a>
                         <a href="https://github.com/victordeman/Data-Management-in-the-Age-of-Lakehouses-and-AI" class="hover:text-secondary-500">GitHub Repo</a>
+                        <a href="https://github.com/victordeman/Data-Management-in-the-Age-of-Lakehouses-and-AI/issues" class="hover:text-secondary-500">Ask Questions</a>
+                        <a href="mailto:victor@deman.com" class="hover:text-secondary-500">Contact</a>
                     </nav>
                 </div>
             </footer>

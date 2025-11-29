@@ -1,0 +1,16 @@
+/* Custom fallback colors for undefined shades in Tailwind config */
+.bg-primary-50 {
+    background-color: rgb(239, 246, 255); /* Equivalent to blue-50 */
+}
+
+.text-primary-600 {
+    color: rgb(37, 99, 235); /* Equivalent to blue-600 */
+}
+
+.bg-secondary-50 {
+    background-color: rgb(236, 253, 245); /* Equivalent to emerald-50 */
+}
+
+.text-secondary-600 {
+    color: rgb(4, 120, 87); /* Equivalent to emerald-600 */
+}

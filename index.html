@@ -26,12 +26,13 @@
     </script>
 </head>
 <body class="bg-gray-50">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <custom-header></custom-header>
    
-    <main class="container mx-auto px-4 py-8">
+    <main id="main-content" class="container mx-auto px-4 py-8" role="main" tabindex="-1">
         <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
             <!-- Slide Header -->
-            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6">
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6" role="banner">
                 <h1 class="text-3xl font-bold text-white">Data Management in the Age of Lakehouses and AI</h1>
                 <div class="flex items-center mt-2 text-white">
                     <span class="mr-4">Advanced undergraduate/Master's</span>
@@ -41,10 +42,10 @@
 
             <!-- Course Overview -->
             <div class="p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Course Overview</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <h2 id="overview-heading" class="text-xl font-semibold text-gray-800 mb-4">Course Overview</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4" aria-labelledby="overview-heading">
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i data-feather="code" class="text-primary-500"></i>
+                        <i data-feather="code" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">100% Open-Source</h3>
                         <p class="text-sm text-gray-600">Linux-first environment with cutting-edge tools</p>
                         <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
@@ -54,7 +55,7 @@
                         </ul>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i data-feather="database" class="text-primary-500"></i>
+                        <i data-feather="database" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">AI/ML-Ready</h3>
                         <p class="text-sm text-gray-600">From raw data to production-ready pipelines</p>
                         <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
@@ -64,7 +65,7 @@
                         </ul>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i data-feather="activity" class="text-primary-500"></i>
+                        <i data-feather="activity" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Hands-on Focus</h3>
                         <p class="text-sm text-gray-600">Weekly labs and capstone project</p>
                         <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
@@ -73,13 +74,13 @@
                         </ul>
                     </div>
                 </div>
-                <img src="https://www.montecarlodata.com/wp-content/uploads/2024/01/data-lakehouse-new-1024x538.png" alt="Data Lakehouse Architecture Diagram" class="mt-4 rounded-lg mx-auto w-full">
+                <img src="https://www.montecarlodata.com/wp-content/uploads/2024/01/data-lakehouse-new-1024x538.png" alt="Diagram illustrating the architecture of a data lakehouse, combining data lake flexibility with data warehouse reliability" class="mt-4 rounded-lg mx-auto w-full">
             </div>
 
             <!-- Curriculum Timeline -->
             <div class="p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Curriculum Timeline</h2>
-                <div class="space-y-6">
+                <h2 id="curriculum-heading" class="text-xl font-semibold text-gray-800 mb-4">Curriculum Timeline</h2>
+                <div class="space-y-6" aria-labelledby="curriculum-heading">
                     <!-- Week 1-2 -->
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
@@ -134,16 +135,17 @@
                     </div>
 
                     <!-- Show more button -->
-                    <button class="text-primary-500 font-medium flex items-center w-full justify-center py-2">
-                        Show full curriculum <i data-feather="chevron-down" class="ml-1 w-4 h-4"></i>
+                    <button class="text-primary-500 font-medium flex items-center w-full justify-center py-2" aria-expanded="false" aria-controls="additional-curriculum">
+                        Show full curriculum <i data-feather="chevron-down" class="ml-1 w-4 h-4" aria-hidden="true"></i>
                     </button>
+                    <div id="additional-curriculum" hidden></div>
                 </div>
             </div>
 
             <!-- Capstone Project -->
             <div class="p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Capstone Project</h2>
-                <div class="bg-secondary-50 p-4 rounded-lg">
+                <h2 id="capstone-heading" class="text-xl font-semibold text-gray-800 mb-4">Capstone Project</h2>
+                <div class="bg-secondary-50 p-4 rounded-lg" aria-labelledby="capstone-heading">
                     <h3 class="font-bold text-secondary-600">"Build Your Own Governed, AI-Ready Open-Source Lakehouse"</h3>
                     <p class="text-sm mt-2">100% Linux, zero cloud bills required (runs on laptop or $10-20/month VMs)</p>
                     <p class="text-sm mt-2">Step-by-step requirements:</p>
@@ -161,35 +163,35 @@
                    
                     <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
                         <div class="flex items-center">
-                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4"></i>
+                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4" aria-hidden="true"></i>
                             <span class="text-xs">Medallion architecture</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4"></i>
+                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4" aria-hidden="true"></i>
                             <span class="text-xs">Time travel + branching</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4"></i>
+                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4" aria-hidden="true"></i>
                             <span class="text-xs">Feature serving</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4"></i>
+                            <i data-feather="check-circle" class="text-secondary-500 mr-2 w-4 h-4" aria-hidden="true"></i>
                             <span class="text-xs">Vector search + RAG</span>
                         </div>
                     </div>
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*1d_QONW7oI8Nb95cNfyJzw.jpeg" alt="Medallion Architecture Diagram" class="mt-4 rounded-lg mx-auto w-full">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*1d_QONW7oI8Nb95cNfyJzw.jpeg" alt="Illustration of medallion architecture showing bronze, silver, and gold data layers in a lakehouse setup" class="mt-4 rounded-lg mx-auto w-full">
                 </div>
             </div>
 
             <!-- Grading -->
             <div class="p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Grading Structure</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <h2 id="grading-heading" class="text-xl font-semibold text-gray-800 mb-4">Grading Structure</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" aria-labelledby="grading-heading">
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="font-medium">Weekly labs & mini-projects</h3>
                         <div class="mt-2 flex items-center">
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-500 h-2.5 rounded-full" style="width: 50%"></div>
+                                <div class="bg-primary-500 h-2.5 rounded-full" style="width: 50%" aria-label="50%"></div>
                             </div>
                             <span class="ml-2 text-sm font-medium">50%</span>
                         </div>
@@ -198,7 +200,7 @@
                         <h3 class="font-medium">Final capstone project</h3>
                         <div class="mt-2 flex items-center">
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-500 h-2.5 rounded-full" style="width: 30%"></div>
+                                <div class="bg-primary-500 h-2.5 rounded-full" style="width: 30%" aria-label="30%"></div>
                             </div>
                             <span class="ml-2 text-sm font-medium">30%</span>
                         </div>
@@ -210,8 +212,8 @@
 
             <!-- Prior Knowledge & Resources -->
             <div class="p-6">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Prior Knowledge & Resources</h2>
-                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                <h2 id="resources-heading" class="text-xl font-semibold text-gray-800 mb-4">Prior Knowledge & Resources</h2>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4" aria-labelledby="resources-heading">
                     <h3 class="font-medium">Prior Knowledge Accommodation Policy</h3>
                     <p class="text-sm text-gray-600 mt-2">Students can swap components they already mastered in previous courses with advanced alternatives, subject to instructor approval.</p>
                 </div>
@@ -227,7 +229,7 @@
                         <li>Public Datasets: <a href="https://huggingface.co/datasets/nyu-visionx/nyc-taxi" class="text-primary-500">NYC Taxi</a>, Reddit Comments, Common Crawl, OpenStreetMap</li>
                         <li>Papers: <a href="https://arxiv.org/abs/1207.0165" class="text-primary-500">GFS</a>, Bigtable, Dremel, Dynamo, Kafka, Delta Lake, Iceberg, Nessie</li>
                     </ul>
-                    <img src="https://media.licdn.com/dms/image/v2/D4E12AQHbrIcO3WFQVw/article-cover_image-shrink_720_1280/B4EZU.aNtBGwAM-/0/1740508814703?e=2147483647&v=beta&t=00HDiV2a1-6Tm1cRsHsCOAHIRWppYftlu1N8fUp6neI" alt="AI-Ready Data Platform Illustration" class="mt-4 rounded-lg mx-auto w-full">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E12AQHbrIcO3WFQVw/article-cover_image-shrink_720_1280/B4EZU.aNtBGwAM-/0/1740508814703?e=2147483647&v=beta&t=00HDiV2a1-6Tm1cRsHsCOAHIRWppYftlu1N8fUp6neI" alt="Illustration of an AI-ready data platform, showing integration of data management tools for machine learning workflows" class="mt-4 rounded-lg mx-auto w-full">
                 </div>
                 <p class="text-sm mt-4 text-center">Fork this repo to start your capstone!</p>
             </div>

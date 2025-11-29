@@ -5,13 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const icon = showMoreBtn.querySelector('i');
     const timeline = showMoreBtn.parentElement;
-    let additionalContent = null;
+    const additionalContentId = 'additional-curriculum';
+    let additionalContent = document.getElementById(additionalContentId);
 
-    showMoreBtn.addEventListener('click', () => {
-        if (!additionalContent) {
-            additionalContent = document.createElement('div');
-            additionalContent.classList.add('space-y-6');
+    showMoreBtn.addEventListener('click', toggleCurriculum);
+    showMoreBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCurriculum();
+        }
+    });
 
+    function toggleCurriculum() {
+        if (!additionalContent.innerHTML.trim()) {
+            // Populate content (as before)
             const weeksData = [
                 {
                     week: 'Week 6',
@@ -87,6 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             ];
 
+            additionalContent = document.createElement('div');
+            additionalContent.classList.add('space-y-6');
+            additionalContent.id = additionalContentId;
+
             weeksData.forEach(data => {
                 const weekDiv = document.createElement('div');
                 weekDiv.classList.add('flex', 'flex-col', 'md:flex-row');
@@ -98,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3 class="font-medium">${data.title}</h3>
                         <p class="text-sm text-gray-600">${data.desc}</p>
                         <div class="mt-2 flex flex-wrap gap-2">
-                            ${data.tags.map(tag => `<span class="text-xs bg-gray-200 px-2 py-1 rounded" title="Info on ${tag}">${tag}</span>`).join('')}
+                            ${data.tags.map(tag => `<span class="text-xs bg-gray-200 px-2 py-1 rounded" title="Information on ${tag}">${tag}</span>`).join('')}
                         </div>
                         <p class="text-xs text-gray-500 mt-2">Key takeaway: ${data.takeaway}</p>
                         <a href="${data.link}" class="text-primary-500 text-xs">Learn More: Slides & Resources</a>
@@ -108,32 +119,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             timeline.insertBefore(additionalContent, showMoreBtn);
-
-            showMoreBtn.firstChild.nodeValue = 'Hide full curriculum ';
-            icon.setAttribute('data-feather', 'chevron-up');
-            feather.replace();
-        } else {
-            if (additionalContent.classList.contains('hidden')) {
-                additionalContent.classList.remove('hidden');
-                showMoreBtn.firstChild.nodeValue = 'Hide full curriculum ';
-                icon.setAttribute('data-feather', 'chevron-up');
-                feather.replace();
-            } else {
-                additionalContent.classList.add('hidden');
-                showMoreBtn.firstChild.nodeValue = 'Show full curriculum ';
-                icon.setAttribute('data-feather', 'chevron-down');
-                feather.replace();
-            }
         }
-    });
+
+        const expanded = showMoreBtn.getAttribute('aria-expanded') === 'true';
+        showMoreBtn.setAttribute('aria-expanded', !expanded);
+        additionalContent.hidden = expanded;
+
+        showMoreBtn.firstChild.nodeValue = expanded ? 'Show full curriculum ' : 'Hide full curriculum ';
+        icon.setAttribute('data-feather', expanded ? 'chevron-down' : 'chevron-up');
+        feather.replace();
+
+        // Focus management: If expanding, focus first item
+        if (!expanded) {
+            additionalContent.querySelector('a').focus();
+        }
+    }
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
         });
+    }
+
+    function toggleMenu() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('hidden');
+        navMenu.setAttribute('aria-hidden', expanded);
+
+        // Focus trap in menu when open
+        if (!expanded) {
+            navMenu.querySelector('a').focus();
+        }
     }
 
     // Dropdown toggle for mobile (click instead of hover)
@@ -143,7 +167,22 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const dropdown = button.nextElementSibling;
             if (dropdown) {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !expanded);
                 dropdown.classList.toggle('hidden');
+                dropdown.setAttribute('aria-hidden', expanded);
+            }
+        });
+        button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const dropdown = button.nextElementSibling;
+                if (dropdown) {
+                    const expanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', !expanded);
+                    dropdown.classList.toggle('hidden');
+                    dropdown.setAttribute('aria-hidden', expanded);
+                }
             }
         });
     });
@@ -152,5 +191,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('orientationchange', () => {
         console.log('Orientation changed to: ' + (window.orientation === 0 ? 'portrait' : 'landscape'));
         // Add layout adjustments if needed, e.g., force re-render
+    });
+
+    // Focus trap helper for sections (general utility)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            const activeSection = document.querySelector('[aria-expanded="true"]:not([hidden])');
+            if (activeSection) {
+                const focusable = activeSection.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
     });
 });

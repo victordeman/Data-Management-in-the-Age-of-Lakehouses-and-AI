@@ -46,3 +46,30 @@ body {
     max-width: 1280px;
     min-width: 320px;
 }
+
+/* Accessibility: Focus styles */
+a:focus, button:focus {
+    outline: 2px solid #3b82f6; /* Visible focus ring */
+    outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ffffff;
+    color: #000000;
+    padding: 8px;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* High contrast adjustments */
+.text-gray-600 {
+    color: #333333; /* Darker for better contrast on light bg */
+}

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Curriculum toggle
     const showMoreBtn = document.querySelector('button.text-primary-500');
     if (!showMoreBtn) return;
 
@@ -20,7 +21,62 @@ document.addEventListener('DOMContentLoaded', () => {
                     takeaway: 'Open formats enable interoperability across tools.',
                     link: 'slides/week6.html'
                 },
-                // ... (keep the rest as before, adding takeaway and link to each)
+                {
+                    week: 'Week 7-8',
+                    title: 'Lakehouse Architectures and Transactions',
+                    desc: 'Implementing ACID properties, time travel, and branching in lakehouses.',
+                    tags: ['Delta Lake', 'Apache Iceberg', 'Apache Hudi', 'ACID'],
+                    takeaway: 'ACID in lakehouses bridges data lakes and warehouses.',
+                    link: 'slides/week7-8.html'
+                },
+                {
+                    week: 'Week 9',
+                    title: 'Data Ingestion and ETL/ELT Pipelines',
+                    desc: 'Designing medallion architecture for data processing layers.',
+                    tags: ['Apache Spark', 'dbt', 'Airflow', 'Bronze/Silver/Gold'],
+                    takeaway: 'Medallion layers ensure data quality progression.',
+                    link: 'slides/week9.html'
+                },
+                {
+                    week: 'Week 10',
+                    title: 'Streaming and Real-Time Analytics',
+                    desc: 'Handling continuous data streams and unified batch/stream processing.',
+                    tags: ['Kafka', 'Flink', 'Spark Streaming', 'Lambda Architecture'],
+                    takeaway: 'Unified processing simplifies real-time systems.',
+                    link: 'slides/week10.html'
+                },
+                {
+                    week: 'Week 11',
+                    title: 'Data Governance, Metadata, and Security',
+                    desc: 'Catalogs, lineage tracking, and access controls in distributed systems.',
+                    tags: ['Apache Atlas', 'Amundsen', 'RBAC', 'Data Lineage'],
+                    takeaway: 'Governance is key for trusted AI data.',
+                    link: 'slides/week11.html'
+                },
+                {
+                    week: 'Week 12',
+                    title: 'Query Engines and Performance Tuning',
+                    desc: 'Federated querying and optimization strategies for large-scale data.',
+                    tags: ['Trino', 'Presto', 'DuckDB', 'Z-Ordering', 'Partition Pruning'],
+                    takeaway: 'Optimization unlocks fast queries on big data.',
+                    link: 'slides/week12.html'
+                },
+                {
+                    week: 'Week 13',
+                    title: 'Feature Engineering and Stores for ML',
+                    desc: 'Building and serving features for machine learning workflows.',
+                    tags: ['Feast', 'Hopsworks', 'Feature Store', 'Point-in-Time Joins'],
+                    takeaway: 'Feature stores bridge data and ML teams.',
+                    link: 'slides/week13.html'
+                },
+                {
+                    week: 'Week 14',
+                    title: 'Vector Databases and AI Integration',
+                    desc: 'Embedding storage, semantic search, and retrieval-augmented generation.',
+                    tags: ['Milvus', 'PGVector', 'RAG', 'Vector Search'],
+                    takeaway: 'Vectors enable AI-powered search.',
+                    link: 'slides/week14.html'
+                },
                 {
                     week: 'Week 15',
                     title: 'Deployment, Monitoring, and Emerging Trends',
@@ -69,5 +125,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 feather.replace();
             }
         }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Dropdown toggle for mobile (click instead of hover)
+    const dropdownButtons = document.querySelectorAll('.dropdown-button');
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdown = button.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+            }
+        });
+    });
+
+    // Orientation detection (log for now, can adjust layouts)
+    window.addEventListener('orientationchange', () => {
+        console.log('Orientation changed to: ' + (window.orientation === 0 ? 'portrait' : 'landscape'));
+        // Add layout adjustments if needed, e.g., force re-render
     });
 });

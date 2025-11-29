@@ -47,18 +47,33 @@
                         <i data-feather="code" class="text-primary-500"></i>
                         <h3 class="font-medium mt-2">100% Open-Source</h3>
                         <p class="text-sm text-gray-600">Linux-first environment with cutting-edge tools</p>
+                        <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
+                            <li>PostgreSQL, Delta Lake, Apache Spark</li>
+                            <li>Kafka, Trino, Milvus</li>
+                            <li><a href="https://www.postgresql.org/docs/" class="text-primary-500">Postgres Docs</a></li>
+                        </ul>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="database" class="text-primary-500"></i>
                         <h3 class="font-medium mt-2">AI/ML-Ready</h3>
                         <p class="text-sm text-gray-600">From raw data to production-ready pipelines</p>
+                        <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
+                            <li>Vector search with pgvector</li>
+                            <li>RAG with Ollama</li>
+                            <li>Feature stores via Feast</li>
+                        </ul>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="activity" class="text-primary-500"></i>
                         <h3 class="font-medium mt-2">Hands-on Focus</h3>
                         <p class="text-sm text-gray-600">Weekly labs and capstone project</p>
+                        <ul class="text-xs text-gray-500 mt-2 list-disc pl-4">
+                            <li>Build a full lakehouse on your laptop</li>
+                            <li>No cloud required</li>
+                        </ul>
                     </div>
                 </div>
+                <img src="https://www.montecarlodata.com/wp-content/uploads/2024/01/data-lakehouse-new-1024x538.png" alt="Data Lakehouse Architecture Diagram" class="mt-4 rounded-lg mx-auto">
             </div>
 
             <!-- Curriculum Timeline -->
@@ -78,6 +93,8 @@
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">5 Vs</span>
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">Kleppmann Ch. 1-3</span>
                             </div>
+                            <p class="text-xs text-gray-500 mt-2">Key takeaway: "Reliability is the ultimate measure of a data system." - Kleppmann</p>
+                            <a href="slides/week1-2.html" class="text-primary-500 text-xs">Learn More: Slides & Resources</a>
                         </div>
                     </div>
 
@@ -94,6 +111,8 @@
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">BRIN/GIN</span>
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">JSONB</span>
                             </div>
+                            <p class="text-xs text-gray-500 mt-2">Key takeaway: ACID properties ensure data integrity in modern workloads.</p>
+                            <a href="slides/week3-4.html" class="text-primary-500 text-xs">Learn More: Slides & Resources</a>
                         </div>
                     </div>
 
@@ -109,6 +128,8 @@
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">S3/MinIO</span>
                                 <span class="text-xs bg-gray-200 px-2 py-1 rounded">Z-ordering</span>
                             </div>
+                            <p class="text-xs text-gray-500 mt-2">Key takeaway: Object storage enables scalable, cost-effective data lakes.</p>
+                            <a href="slides/week5.html" class="text-primary-500 text-xs">Learn More: Slides & Resources</a>
                         </div>
                     </div>
 
@@ -125,6 +146,18 @@
                 <div class="bg-secondary-50 p-4 rounded-lg">
                     <h3 class="font-bold text-secondary-600">"Build Your Own Governed, AI-Ready Open-Source Lakehouse"</h3>
                     <p class="text-sm mt-2">100% Linux, zero cloud bills required (runs on laptop or $10-20/month VMs)</p>
+                    <p class="text-sm mt-2">Step-by-step requirements:</p>
+                    <ol class="text-xs list-decimal pl-4">
+                        <li>Set up MinIO for object storage.</li>
+                        <li>Implement Delta/Iceberg tables with Spark/Polars.</li>
+                        <li>Federate queries with Trino.</li>
+                        <li>Add governance via Nessie + OpenMetadata.</li>
+                        <li>Orchestrate with Airflow + dbt.</li>
+                        <li>Serve features with Feast.</li>
+                        <li>Enable vector search with Milvus.</li>
+                        <li>Demo RAG with Ollama.</li>
+                    </ol>
+                    <a href="https://gist.github.com/victordeman/example-starter" class="text-primary-500 text-xs mt-2 block">Starter Template on GitHub</a>
                    
                     <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
                         <div class="flex items-center">
@@ -144,11 +177,12 @@
                             <span class="text-xs">Vector search + RAG</span>
                         </div>
                     </div>
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*1d_QONW7oI8Nb95cNfyJzw.jpeg" alt="Medallion Architecture Diagram" class="mt-4 rounded-lg mx-auto">
                 </div>
             </div>
 
             <!-- Grading -->
-            <div class="p-6">
+            <div class="p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Grading Structure</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
@@ -170,6 +204,32 @@
                         </div>
                     </div>
                 </div>
+                <p class="text-sm mt-4">Bonus: +10 for Kubernetes deployment, Iceberg+Nessie, streaming, tests, etc.</p>
+                <a href="rubric.html" class="text-primary-500 text-sm">View Detailed 100-Point Rubric</a>
+            </div>
+
+            <!-- Prior Knowledge & Resources -->
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Prior Knowledge & Resources</h2>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <h3 class="font-medium">Prior Knowledge Accommodation Policy</h3>
+                    <p class="text-sm text-gray-600 mt-2">Students can swap components they already mastered in previous courses with advanced alternatives, subject to instructor approval.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-medium">Resources (All Free or Open-Source)</h3>
+                    <ul class="text-sm text-gray-600 mt-2 list-disc pl-4">
+                        <li><a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" class="text-primary-500">Designing Data-Intensive Applications (Kleppmann)</a> – Required</li>
+                        <li><a href="https://delta.io/docs/" class="text-primary-500">Delta Lake Documentation</a></li>
+                        <li><a href="https://iceberg.apache.org/docs/" class="text-primary-500">Apache Iceberg Documentation</a></li>
+                        <li><a href="https://trino.io/docs/" class="text-primary-500">Trino Documentation</a></li>
+                        <li><a href="https://nessie.io/docs/" class="text-primary-500">Nessie Documentation</a></li>
+                        <li><a href="https://feast.dev/docs/" class="text-primary-500">Feast Documentation</a></li>
+                        <li>Public Datasets: <a href="https://huggingface.co/datasets/nyu-visionx/nyc-taxi" class="text-primary-500">NYC Taxi</a>, Reddit Comments, Common Crawl, OpenStreetMap</li>
+                        <li>Papers: <a href="https://arxiv.org/abs/1207.0165" class="text-primary-500">GFS</a>, Bigtable, Dremel, Dynamo, Kafka, Delta Lake, Iceberg, Nessie</li>
+                    </ul>
+                    <img src="https://media.licdn.com/dms/image/v2/D4E12AQHbrIcO3WFQVw/article-cover_image-shrink_720_1280/B4EZU.aNtBGwAM-/0/1740508814703?e=2147483647&v=beta&t=00HDiV2a1-6Tm1cRsHsCOAHIRWppYftlu1N8fUp6neI" alt="AI-Ready Data Platform Illustration" class="mt-4 rounded-lg mx-auto">
+                </div>
+                <p class="text-sm mt-4 text-center">Fork this repo to start your capstone!</p>
             </div>
         </div>
     </main>

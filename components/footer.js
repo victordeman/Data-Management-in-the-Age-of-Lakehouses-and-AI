@@ -1,10 +1,10 @@
 class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="bg-gray-800 text-white p-4 mt-8">
+            <footer class="bg-gray-800 text-white p-4 mt-8" role="contentinfo">
                 <div class="container mx-auto flex flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0">
                     <p>&copy; 2025 Victor Deman. All rights reserved.</p>
-                    <nav class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4">
+                    <nav class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4" aria-label="Footer navigation">
                         <a href="#" class="hover:text-secondary-500">Privacy Policy</a>
                         <a href="#" class="hover:text-secondary-500">Terms of Use</a>
                         <a href="https://github.com/victordeman/Data-Management-in-the-Age-of-Lakehouses-and-AI" class="hover:text-secondary-500">GitHub Repo</a>

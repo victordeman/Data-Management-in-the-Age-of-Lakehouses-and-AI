@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#3b82f6',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <custom-header></custom-header>
+   
+    <main id="main-content" class="container mx-auto px-4 py-8" role="main" tabindex="-1">
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- Capstone Header -->
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6" role="banner">
+                <h1 class="text-3xl font-bold text-white">Capstone Project</h1>
+                <p class="text-white mt-2">Build Your Own Governed, AI-Ready Open-Source Lakehouse (Weeks 10–15)</p>
+            </div>
+
+            <!-- Project Overview -->
+            <div class="p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h2>
+                <p class="text-sm text-gray-600">100% Linux, zero cloud bills required (runs on laptop or $10-20/month VMs). Required stack: MinIO → Delta/Iceberg → Spark/Polars → Trino → Nessie + OpenMetadata → Airflow + dbt → Feast → Milvus → Ollama RAG demo.</p>
+                <p class="text-sm text-gray-600 mt-2">Must demonstrate live:</p>
+                <ul class="text-sm text-gray-600 mt-2 list-disc pl-4">
+                    <li>Medallion architecture (bronze/silver/gold)</li>
+                    <li>Time travel + branching (Nessie or Delta)</li>
+                    <li>Feature serving (online Redis + offline Parquet)</li>
+                    <li>Vector search + RAG over your own data</li>
+                    <li>Full lineage in OpenMetadata</li>
+                </ul>
+            </div>
+
+            <!-- Step-by-Step Requirements -->
+            <div class="p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Step-by-Step Requirements</h2>
+                <ol class="text-sm text-gray-600 list-decimal pl-4">
+                    <li>Set up MinIO for object storage.</li>
+                    <li>Implement Delta/Iceberg tables with Spark/Polars.</li>
+                    <li>Federate queries with Trino.</li>
+                    <li>Add governance via Nessie + OpenMetadata.</li>
+                    <li>Orchestrate with Airflow + dbt.</li>
+                    <li>Serve features with Feast.</li>
+                    <li>Enable vector search with Milvus.</li>
+                    <li>Demo RAG with Ollama.</li>
+                </ol>
+                <p class="text-sm text-gray-600 mt-4">Starter Template: <a href="https://gist.github.com/victordeman/example-starter" class="text-primary-500">GitHub Gist</a></p>
+            </div>
+
+            <!-- Medallion Architecture Diagram -->
+            <div class="p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Medallion Architecture Diagram</h2>
+                <div class="relative flex flex-col items-center">
+                    <div class="bg-gray-50 p-4 rounded-lg mb-4 w-full max-w-md">
+                        <h3 class="font-medium text-center">Bronze Layer</h3>
+                        <p class="text-sm text-gray-600 text-center">Raw data ingestion</p>
+                    </div>
+                    <i data-feather="arrow-down" class="text-primary-500 w-8 h-8"></i>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-4 w-full max-w-md">
+                        <h3 class="font-medium text-center">Silver Layer</h3>
+                        <p class="text-sm text-gray-600 text-center">Validated and cleaned data</p>
+                    </div>
+                    <i data-feather="arrow-down" class="text-primary-500 w-8 h-8"></i>
+                    <div class="bg-gray-50 p-4 rounded-lg w-full max-w-md">
+                        <h3 class="font-medium text-center">Gold Layer</h3>
+                        <p class="text-sm text-gray-600 text-center">Aggregated, business-ready data</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grading Rubric -->
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Grading Rubric</h2>
+                <p class="text-sm text-gray-600">The capstone is 30% of the grade, using a 100-point rubric. <a href="rubric.html" class="text-primary-500">View Detailed Rubric</a></p>
+                <p class="text-sm text-gray-600 mt-2">Bonus (+10): Kubernetes deployment, Iceberg+Nessie, streaming, tests, etc.</p>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

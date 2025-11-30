@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Curriculum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#3b82f6',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <custom-header></custom-header>
+   
+    <main id="main-content" class="container mx-auto px-4 py-8" role="main" tabindex="-1">
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- Curriculum Header -->
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6" role="banner">
+                <h1 class="text-3xl font-bold text-white">Course Curriculum</h1>
+                <p class="text-white mt-2">15 weeks of advanced data management, focusing on open-source tools and AI-ready platforms</p>
+            </div>
+
+            <!-- Curriculum Timeline -->
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Full Curriculum Timeline</h2>
+                <div class="space-y-6">
+                    <!-- Week 1-2 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 1-2</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Why Traditional Data Management Broke & What Replaced It</h3>
+                            <p class="text-sm text-gray-600">From RDBMS → NoSQL → data lakes → lakehouse paradigm</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">5 Vs revisited</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Stonebraker & Pavlo (2024)</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Linux toolbox (bash, tmux, jq, docker, systemd)</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Lab 0 - Personal Linux data workstation setup</p>
+                            <a href="slides/week1-2.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 3-4 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 3-4</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Relational Deep Dive + Modern SQL</h3>
+                            <p class="text-sm text-gray-600">PostgreSQL 17 deep dive (partitioning, BRIN/GIN, JSONB, extensions)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">ACID vs BASE</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">OLTP vs OLAP</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">TPC-H 100 GB benchmarking</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Mini-project - Optimize a 50–100 GB TPC-H instance on Postgres</p>
+                            <a href="slides/week3-4.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 5 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 5</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Data Lakes & Object Storage Revolution</h3>
+                            <p class="text-sm text-gray-600">Object store semantics (S3, MinIO)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Limitations of “dumb” lakes</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Partitioning strategies</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Z-ordering</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Lab - Build a raw data lake with 2023–2025 public datasets (~200 GB)</p>
+                            <a href="slides/week5.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 6-7 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 6-7</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Open Table Formats – The New Foundation</h3>
+                            <p class="text-sm text-gray-600">Delta Lake vs Apache Iceberg vs Apache Hudi</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">ACID transactions</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Schema evolution</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Time travel</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Compaction</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Convert raw lake → Delta + Iceberg tables; Demo time-travel & schema enforcement</p>
+                            <a href="slides/week6-7.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 8 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 8</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Catalogs, Governance & Data Versioning</h3>
+                            <p class="text-sm text-gray-600">Hive Metastore → Nessie (Git-for-data)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">OpenMetadata</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Amundsen</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Lineage</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Tagging</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Ownership</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Lab - Create branches, merge conflicts, rollback with Nessie</p>
+                            <a href="slides/week8.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 9-10 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 9-10</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Processing Engines – Batch & Beyond</h3>
+                            <p class="text-sm text-gray-600">Apache Spark 3.5+ (PySpark)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Polars (Rust)</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">DuckDB for single-node</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Dask vs Modin vs Spark</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Performance showdown lab - Same 50 GB query on Spark vs Polars vs DuckDB</p>
+                            <a href="slides/week9-10.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 11 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 11</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Stream Processing & Change Data Capture</h3>
+                            <p class="text-sm text-gray-600">Apache Kafka + Kafka Connect</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Debezium for CDC</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">RisingWave / Materialize (streaming SQL)</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Lab - Postgres → Kafka → real-time materialized dashboard</p>
+                            <a href="slides/week11.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 12 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 12</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Query Federation & Modern Analytics Engines</h3>
+                            <p class="text-sm text-gray-600">Trino (federated SQL)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Druid vs ClickHouse vs Pinot shoot-out</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Lab - One SQL query across Delta tables + Postgres + Kafka</p>
+                            <a href="slides/week12.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 13 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 13</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Orchestration, Quality & Transformation</h3>
+                            <p class="text-sm text-gray-600">Apache Airflow (or Mage/Prefect)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">dbt Core</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Great Expectations / Soda</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Mini-project - Full medallion pipeline (bronze→silver→gold) with tests</p>
+                            <a href="slides/week13.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 14 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 14</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Feature Stores & Preparing Data for AI/ML</h3>
+                            <p class="text-sm text-gray-600">Feast (open-source feature store)</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Online + offline serving</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Point-in-time joins</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">MLflow tracking</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Extend pipeline → Feast repo + model training</p>
+                            <a href="slides/week14.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+
+                    <!-- Week 15 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 bg-primary-50 p-3 rounded-l-lg">
+                            <span class="font-bold text-primary-600">Week 15</span>
+                        </div>
+                        <div class="md:w-3/4 bg-gray-50 p-3 rounded-r-lg">
+                            <h3 class="font-medium">Vector Data Management & RAG-Ready Platforms + Capstone</h3>
+                            <p class="text-sm text-gray-600">Milvus / Qdrant / pgvector</p>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Hybrid search</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Metadata filtering</span>
+                                <span class="text-xs bg-gray-200 px-2 py-1 rounded">Local LLMs with Ollama</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Hands-on: Final project presentations (8–10 min live demo)</p>
+                            <a href="slides/week15.html" class="text-primary-500 text-xs">View Slides</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

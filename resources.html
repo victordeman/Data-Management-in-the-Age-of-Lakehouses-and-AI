@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#3b82f6',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <custom-header></custom-header>
+   
+    <main id="main-content" class="container mx-auto px-4 py-8" role="main" tabindex="-1">
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- Resources Header -->
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 p-6" role="banner">
+                <h1 class="text-3xl font-bold text-white">Course Resources</h1>
+                <p class="text-white mt-2">All free or open-source materials for the course</p>
+            </div>
+
+            <!-- Required Reading -->
+            <div class="p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Required Reading</h2>
+                <ul class="text-sm text-gray-600 list-disc pl-4">
+                    <li><a href="https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf" class="text-primary-500">"What Goes Around Comes Around... And Around..." by Stonebraker & Pavlo (2024)</a></li>
+                    <li>Delta Lake Documentation: <a href="https://delta.io/docs/" class="text-primary-500">Link</a></li>
+                    <li>Apache Iceberg Documentation: <a href="https://iceberg.apache.org/docs/" class="text-primary-500">Link</a></li>
+                    <li>Trino Documentation: <a href="https://trino.io/docs/" class="text-primary-500">Link</a></li>
+                    <li>Nessie Documentation: <a href="https://nessie.io/docs/" class="text-primary-500">Link</a></li>
+                    <li>Feast Documentation: <a href="https://feast.dev/docs/" class="text-primary-500">Link</a></li>
+                </ul>
+            </div>
+
+            <!-- Public Datasets -->
+            <div class="p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Public Datasets</h2>
+                <ul class="text-sm text-gray-600 list-disc pl-4">
+                    <li>NYC Taxi: <a href="https://huggingface.co/datasets/nyu-visionx/nyc-taxi" class="text-primary-500">Hugging Face Link</a></li>
+                    <li>Reddit Comments: <a href="https://pushshift.io/" class="text-primary-500">Pushshift API</a></li>
+                    <li>Common Crawl: <a href="https://commoncrawl.org/" class="text-primary-500">Website</a></li>
+                    <li>OpenStreetMap: <a href="https://www.openstreetmap.org/" class="text-primary-500">Website</a></li>
+                </ul>
+            </div>
+
+            <!-- Key Papers -->
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Key Papers</h2>
+                <table class="w-full text-sm text-left text-gray-600">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3">Paper</th>
+                            <th class="px-6 py-3">Authors</th>
+                            <th class="px-6 py-3">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">GFS (Google File System)</td>
+                            <td class="px-6 py-4">Ghemawat et al. (2003)</td>
+                            <td class="px-6 py-4"><a href="https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Bigtable</td>
+                            <td class="px-6 py-4">Chang et al. (2006)</td>
+                            <td class="px-6 py-4"><a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Dremel</td>
+                            <td class="px-6 py-4">Melnik et al. (2010)</td>
+                            <td class="px-6 py-4"><a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Dynamo</td>
+                            <td class="px-6 py-4">DeCandia et al. (2007)</td>
+                            <td class="px-6 py-4"><a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Kafka</td>
+                            <td class="px-6 py-4">Kreps et al. (2011)</td>
+                            <td class="px-6 py-4"><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Delta Lake</td>
+                            <td class="px-6 py-4">Armbrust et al. (2019)</td>
+                            <td class="px-6 py-4"><a href="https://databricks.com/wp-content/uploads/2020/08/Delta-Lake-Whitepaper.pdf" class="text-primary-500">PDF</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4">Iceberg</td>
+                            <td class="px-6 py-4">Netflix Team (2017)</td>
+                            <td class="px-6 py-4"><a href="https://www.netflix.com/blog/introducing-apache-iceberg-tables/" class="text-primary-500">Blog/PDF</a></td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-6 py-4">Nessie</td>
+                            <td class="px-6 py-4">Dremio Team (2021)</td>
+                            <td class="px-6 py-4"><a href="https://www.dremio.com/blog/project-nessie-git-for-data-lakes/" class="text-primary-500">Blog/PDF</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

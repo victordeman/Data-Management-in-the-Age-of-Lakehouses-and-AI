@@ -52,77 +52,235 @@
             <!-- Evolution Timeline -->
             <div class="p-6 border-b">
                 <h2 id="evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">Evolution Timeline</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="evolution-heading">A visual and historical overview of data management progression, integrating RDBMS genealogy, adaptations, and modern shifts from the paper and DBMS bloodlines:</p>
-                <div class="mt-4 space-y-4">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">RDBMS Era (1970s-2000s)</h3>
-                        <p class="text-sm text-gray-600">Structured data with SQL and ACID, but limited scalability for big data (Stonebraker & Pavlo, pp. 21-22). Dominance of relational model absorbing alternatives.</p>
+                <p class="text-sm text-gray-600" aria-labelledby="evolution-heading">A visual overview of data management progression, integrating RDBMS genealogy, adaptations, and modern shifts from the paper and DBMS bloodlines:</p>
+                <div class="relative border-l border-gray-200 ml-4 mt-6">
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1970s-2000s</time>
+                            <h3 class="text-lg font-semibold text-gray-900">RDBMS Era</h3>
+                            <p class="text-sm text-gray-600">Structured data with SQL and ACID, but limited scalability for big data (Stonebraker & Pavlo, pp. 21-22). Dominance of relational model absorbing alternatives.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">NoSQL Rise (2000s)</h3>
-                        <p class="text-sm text-gray-600">Addressed RDBMS scalability; features like JSON, BASE consistency (pp. 23-24). Convergence as NoSQL adds SQL-like interfaces.</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="shuffle" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2000s</time>
+                            <h3 class="text-lg font-semibold text-gray-900">NoSQL Rise</h3>
+                            <p class="text-sm text-gray-600">Addressed RDBMS scalability; features like JSON, BASE consistency (pp. 23-24). Convergence as NoSQL adds SQL-like interfaces.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">Data Lakes (2010s)</h3>
-                        <p class="text-sm text-gray-600">Cheap raw storage in cloud object stores, but lacked governance (pp. 27-28).</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="layers" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2010s</time>
+                            <h3 class="text-lg font-semibold text-gray-900">Data Lakes</h3>
+                            <p class="text-sm text-gray-600">Cheap raw storage in cloud object stores, but lacked governance (pp. 27-28).</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">Lakehouse Paradigm (2020s+)</h3>
-                        <p class="text-sm text-gray-600">Unifies lakes with ACID, open formats (e.g., Delta Lake, Iceberg); cloud-driven elasticity (p. 28).</p>
+                    <div class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="zap" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2020s+</time>
+                            <h3 class="text-lg font-semibold text-gray-900">Lakehouse Paradigm</h3>
+                            <p class="text-sm text-gray-600">Unifies lakes with ACID, open formats (e.g., Delta Lake, Iceberg); cloud-driven elasticity (p. 28).</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Integrated RDBMS Genealogy from DBMS-bloodlines.html -->
                 <div class="mt-6">
-                    <h3 id="rdbms-genealogy" class="text-lg font-semibold text-gray-800 mb-2">RDBMS Genealogy</h3>
+                    <h3 id="rdbms-genealogy" class="text-lg font-semibold text-gray-800 mb-2">RDBMS Genealogy Timeline</h3>
                     <p class="text-sm text-gray-600">Tracing bloodlines from foundational systems (based on Hasso-Plattner-Institut RDBMS Genealogy):</p>
-                    <ul class="text-sm text-gray-600 mt-2 list-disc pl-4">
-                        <li>1970: E.F. Codd's relational model; IBM System R (first SQL).</li>
-                        <li>1974-1977: Ingres (UC Berkeley) → PostgreSQL (1996 → v17 2024), Redshift (2012), CockroachDB (2015), YugabyteDB (2017).</li>
-                        <li>1979: Oracle V2 → v23ai (2024).</li>
-                        <li>1981-1983: IBM SQL/DS and DB2 → v13 (2023).</li>
-                        <li>1986: Postgres (Berkeley) branches.</li>
-                        <li>1987: SQL Server (Sybase-based) → v2022 (preview v2025).</li>
-                        <li>1995: MySQL → v8.4 (2024).</li>
-                        <li>2000: SQLite → v3.46 (2024); Firebird → v5 (2023).</li>
-                        <li>2009: MariaDB → v11.0 (2024).</li>
-                        <li>2010: SAP HANA → v2.0 SPS07 (2023).</li>
-                        <li>2012: Amazon Redshift; Snowflake.</li>
-                        <li>2022: Google AlloyDB.</li>
-                        <li>2023: SQL:2023 with graph queries; AI integrations.</li>
-                    </ul>
+                    <div class="relative border-l border-gray-200 ml-4 mt-4">
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1970</time>
+                                <p class="text-sm text-gray-600">E.F. Codd's relational model; IBM System R (first SQL).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1974-1977</time>
+                                <p class="text-sm text-gray-600">Ingres (UC Berkeley) → PostgreSQL (1996 → v17 2024), Redshift (2012), CockroachDB (2015), YugabyteDB (2017).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1979</time>
+                                <p class="text-sm text-gray-600">Oracle V2 → v23ai (2024).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1981-1983</time>
+                                <p class="text-sm text-gray-600">IBM SQL/DS and DB2 → v13 (2023).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1986</time>
+                                <p class="text-sm text-gray-600">Postgres (Berkeley) branches.</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1987</time>
+                                <p class="text-sm text-gray-600">SQL Server (Sybase-based) → v2022 (preview v2025).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">1995</time>
+                                <p class="text-sm text-gray-600">MySQL → v8.4 (2024).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2000</time>
+                                <p class="text-sm text-gray-600">SQLite → v3.46 (2024); Firebird → v5 (2023).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2009</time>
+                                <p class="text-sm text-gray-600">MariaDB → v11.0 (2024).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2010</time>
+                                <p class="text-sm text-gray-600">SAP HANA → v2.0 SPS07 (2023).</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2012</time>
+                                <p class="text-sm text-gray-600">Amazon Redshift; Snowflake.</p>
+                            </div>
+                        </div>
+                        <div class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2022</time>
+                                <p class="text-sm text-gray-600">Google AlloyDB.</p>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                                <i data-feather="database" class="text-primary-500 w-3 h-3"></i>
+                            </span>
+                            <div class="flex flex-col">
+                                <time class="mb-1 text-sm font-normal leading-none text-gray-400">2023</time>
+                                <p class="text-sm text-gray-600">SQL:2023 with graph queries; AI integrations.</p>
+                            </div>
+                        </div>
+                    </div>
                     <p class="text-sm text-gray-600 mt-2">Family Tree Branches: System R (IBM, Oracle, SQL Server, Sybase, Teradata); Ingres (PostgreSQL, CockroachDB, etc.).</p>
                 </div>
             </div>
 
             <!-- SQL Standards Evolution from SQL-evolution.html -->
             <div class="p-6 border-b">
-                <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
-                <div class="mt-4 space-y-4">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">1970-1979</h3>
-                        <p class="text-sm text-gray-600">Codd's relational model; SEQUEL at IBM; first commercial: IBM System/38, Oracle V2.</p>
+                <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution Timeline</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Visual timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
+                <div class="relative border-l border-gray-200 ml-4 mt-6">
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1970-1979</time>
+                            <p class="text-sm text-gray-600">Codd's relational model; SEQUEL at IBM; first commercial: IBM System/38, Oracle V2.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">1986: SQL-86</h3>
-                        <p class="text-sm text-gray-600">First ANSI standard.</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1986</time>
+                            <p class="text-sm text-gray-600">SQL-86: First ANSI standard.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">1992: SQL-92</h3>
-                        <p class="text-sm text-gray-600">Major revision with entry-level features widely implemented.</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1992</time>
+                            <p class="text-sm text-gray-600">SQL-92: Major revision with entry-level features widely implemented.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">1999: SQL:1999</h3>
-                        <p class="text-sm text-gray-600">Regular expressions, recursive queries, triggers, object-oriented features.</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1999</time>
+                            <p class="text-sm text-gray-600">SQL:1999: Regular expressions, recursive queries, triggers, object-oriented features.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">2016: SQL:2016</h3>
-                        <p class="text-sm text-gray-600">Row pattern matching, JSON operations (aligns with NoSQL convergence).</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2016</time>
+                            <p class="text-sm text-gray-600">SQL:2016: Row pattern matching, JSON operations (aligns with NoSQL convergence).</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">2023: SQL:2023</h3>
-                        <p class="text-sm text-gray-600">JSON data type, Property Graph Queries (SQL/PGQ).</p>
+                    <div class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2023</time>
+                            <p class="text-sm text-gray-600">SQL:2023: JSON data type, Property Graph Queries (SQL/PGQ).</p>
+                        </div>
                     </div>
                 </div>
                 <p class="text-sm text-gray-600 mt-4">Historical Context: Evolved from SQUARE to SEQUEL; standardized by ANSI/ISO. As of 2025, no new standards beyond SQL:2023.</p>
@@ -130,20 +288,35 @@
 
             <!-- NoSQL Evolution from NoSQL-evolution.html -->
             <div class="p-6 border-b">
-                <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):</p>
-                <div class="mt-4 space-y-4">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">1960s-1990s</h3>
-                        <p class="text-sm text-gray-600">Early non-relational (hierarchical IMS, network CODASYL); "NoSQL" coined in 1998.</p>
+                <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution Timeline</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Visual timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):</p>
+                <div class="relative border-l border-gray-200 ml-4 mt-6">
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="shuffle" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1960s-1990s</time>
+                            <p class="text-sm text-gray-600">Early non-relational (hierarchical IMS, network CODASYL); "NoSQL" coined in 1998.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">2004-2009</h3>
-                        <p class="text-sm text-gray-600">Google BigTable (2004, inspired HBase/Cassandra); CouchDB (2005, document); Hadoop/S3 (2006); Amazon Dynamo (2007, key-value like Riak); Cassandra (2008, wide-column); Neo4j (2008, graph); MongoDB/Redis (2009).</p>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="shuffle" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2004-2009</time>
+                            <p class="text-sm text-gray-600">Google BigTable (2004, inspired HBase/Cassandra); CouchDB (2005, document); Hadoop/S3 (2006); Amazon Dynamo (2007, key-value like Riak); Cassandra (2008, wide-column); Neo4j (2008, graph); MongoDB/Redis (2009).</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-medium">2020s</h3>
-                        <p class="text-sm text-gray-600">Hybrid/multi-model systems; AI integrations; convergence with SQL (e.g., MongoDB adds SQL in 2021).</p>
+                    <div class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="shuffle" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2020s</time>
+                            <p class="text-sm text-gray-600">Hybrid/multi-model systems; AI integrations; convergence with SQL (e.g., MongoDB adds SQL in 2021).</p>
+                        </div>
                     </div>
                 </div>
                 <p class="text-sm text-gray-600 mt-4">Categories: Key-value (Redis), Document (MongoDB, CouchDB), Wide-column (Cassandra), Graph (Neo4j). Rise: Handled unstructured data, scale; trends: Edge computing, serverless, SQL/NoSQL blur.</p>

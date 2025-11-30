@@ -40,81 +40,160 @@
             <!-- Lecture Overview -->
             <div class="p-6 border-b">
                 <h2 id="overview-heading" class="text-xl font-semibold text-gray-800 mb-4">Lecture Overview</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="overview-heading">This week explores the evolution of data management systems, the challenges of traditional approaches, and the emergence of modern paradigms. We'll revisit the 5 Vs of Big Data and dive into chapters 1-3 of Kleppmann's "Designing Data-Intensive Applications."</p>
+                <p class="text-sm text-gray-600" aria-labelledby="overview-heading">This week explores the evolution of data management systems, the challenges of traditional approaches, and the emergence of modern paradigms. We'll revisit the 5 Vs of Big Data and draw from the 2024 paper "What Goes Around Comes Around... And Around..." by Michael Stonebraker and Andrew Pavlo (Carnegie Mellon University), focusing on RDBMS adaptations, NoSQL convergence, and lakehouses.</p>
                 <ul class="text-sm text-gray-600 mt-4 list-disc pl-4">
                     <li>Understand why RDBMS struggled with scale and variety.</li>
                     <li>Learn about NoSQL's trade-offs and data lakes' flexibility.</li>
                     <li>Discover how lakehouses combine the best of lakes and warehouses.</li>
                 </ul>
+                <p class="text-sm text-gray-600 mt-4">Reference: <a href="https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf" class="text-primary-500">Stonebraker & Pavlo (2024)</a></p>
             </div>
 
             <!-- Evolution Timeline -->
             <div class="p-6 border-b">
                 <h2 id="evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">Evolution Timeline</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="evolution-heading">A visual overview of data management progression:</p>
-                <img src="https://miro.medium.com/0*jI5yD4WZRufcO3i5" alt="Timeline diagram showing the evolution from relational databases (RDBMS) in the 1970s, to NoSQL in the 2000s, data lakes in the 2010s, and modern lakehouses combining ACID transactions with scalable storage" class="mt-4 rounded-lg mx-auto w-full">
+                <p class="text-sm text-gray-600" aria-labelledby="evolution-heading">A visual and historical overview of data management progression, integrating RDBMS genealogy, adaptations, and modern shifts from the paper and DBMS bloodlines:</p>
                 <div class="mt-4 space-y-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="font-medium">RDBMS Era (1970s-2000s)</h3>
-                        <p class="text-sm text-gray-600">Structured data with SQL, ACID guarantees, but limited scalability for big data.</p>
+                        <p class="text-sm text-gray-600">Structured data with SQL and ACID, but limited scalability for big data (Stonebraker & Pavlo, pp. 21-22). Dominance of relational model absorbing alternatives.</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="font-medium">NoSQL Rise (2000s)</h3>
-                        <p class="text-sm text-gray-600">Flexible schemas, horizontal scaling, but often sacrificed consistency.</p>
+                        <p class="text-sm text-gray-600">Addressed RDBMS scalability; features like JSON, BASE consistency (pp. 23-24). Convergence as NoSQL adds SQL-like interfaces.</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="font-medium">Data Lakes (2010s)</h3>
-                        <p class="text-sm text-gray-600">Store raw data cheaply, but lacked governance and query performance.</p>
+                        <p class="text-sm text-gray-600">Cheap raw storage in cloud object stores, but lacked governance (pp. 27-28).</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="font-medium">Lakehouse Paradigm (2020s+)</h3>
-                        <p class="text-sm text-gray-600">Open formats like Delta Lake add transactions, schema enforcement, and AI readiness to lakes.</p>
+                        <p class="text-sm text-gray-600">Unifies lakes with ACID, open formats (e.g., Delta Lake, Iceberg); cloud-driven elasticity (p. 28).</p>
                     </div>
                 </div>
+
+                <!-- Integrated RDBMS Genealogy from DBMS-bloodlines.html -->
+                <div class="mt-6">
+                    <h3 id="rdbms-genealogy" class="text-lg font-semibold text-gray-800 mb-2">RDBMS Genealogy</h3>
+                    <p class="text-sm text-gray-600">Tracing bloodlines from foundational systems (based on Hasso-Plattner-Institut RDBMS Genealogy):</p>
+                    <ul class="text-sm text-gray-600 mt-2 list-disc pl-4">
+                        <li>1970: E.F. Codd's relational model; IBM System R (first SQL).</li>
+                        <li>1974-1977: Ingres (UC Berkeley) → PostgreSQL (1996 → v17 2024), Redshift (2012), CockroachDB (2015), YugabyteDB (2017).</li>
+                        <li>1979: Oracle V2 → v23ai (2024).</li>
+                        <li>1981-1983: IBM SQL/DS and DB2 → v13 (2023).</li>
+                        <li>1986: Postgres (Berkeley) branches.</li>
+                        <li>1987: SQL Server (Sybase-based) → v2022 (preview v2025).</li>
+                        <li>1995: MySQL → v8.4 (2024).</li>
+                        <li>2000: SQLite → v3.46 (2024); Firebird → v5 (2023).</li>
+                        <li>2009: MariaDB → v11.0 (2024).</li>
+                        <li>2010: SAP HANA → v2.0 SPS07 (2023).</li>
+                        <li>2012: Amazon Redshift; Snowflake.</li>
+                        <li>2022: Google AlloyDB.</li>
+                        <li>2023: SQL:2023 with graph queries; AI integrations.</li>
+                    </ul>
+                    <p class="text-sm text-gray-600 mt-2">Family Tree Branches: System R (IBM, Oracle, SQL Server, Sybase, Teradata); Ingres (PostgreSQL, CockroachDB, etc.).</p>
+                </div>
+            </div>
+
+            <!-- SQL Standards Evolution from SQL-evolution.html -->
+            <div class="p-6 border-b">
+                <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
+                <div class="mt-4 space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">1970-1979</h3>
+                        <p class="text-sm text-gray-600">Codd's relational model; SEQUEL at IBM; first commercial: IBM System/38, Oracle V2.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">1986: SQL-86</h3>
+                        <p class="text-sm text-gray-600">First ANSI standard.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">1992: SQL-92</h3>
+                        <p class="text-sm text-gray-600">Major revision with entry-level features widely implemented.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">1999: SQL:1999</h3>
+                        <p class="text-sm text-gray-600">Regular expressions, recursive queries, triggers, object-oriented features.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">2016: SQL:2016</h3>
+                        <p class="text-sm text-gray-600">Row pattern matching, JSON operations (aligns with NoSQL convergence).</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">2023: SQL:2023</h3>
+                        <p class="text-sm text-gray-600">JSON data type, Property Graph Queries (SQL/PGQ).</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-4">Historical Context: Evolved from SQUARE to SEQUEL; standardized by ANSI/ISO. As of 2025, no new standards beyond SQL:2023.</p>
+            </div>
+
+            <!-- NoSQL Evolution from NoSQL-evolution.html -->
+            <div class="p-6 border-b">
+                <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):</p>
+                <div class="mt-4 space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">1960s-1990s</h3>
+                        <p class="text-sm text-gray-600">Early non-relational (hierarchical IMS, network CODASYL); "NoSQL" coined in 1998.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">2004-2009</h3>
+                        <p class="text-sm text-gray-600">Google BigTable (2004, inspired HBase/Cassandra); CouchDB (2005, document); Hadoop/S3 (2006); Amazon Dynamo (2007, key-value like Riak); Cassandra (2008, wide-column); Neo4j (2008, graph); MongoDB/Redis (2009).</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium">2020s</h3>
+                        <p class="text-sm text-gray-600">Hybrid/multi-model systems; AI integrations; convergence with SQL (e.g., MongoDB adds SQL in 2021).</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-4">Categories: Key-value (Redis), Document (MongoDB, CouchDB), Wide-column (Cassandra), Graph (Neo4j). Rise: Handled unstructured data, scale; trends: Edge computing, serverless, SQL/NoSQL blur.</p>
             </div>
 
             <!-- 5 Vs Revisited -->
             <div class="p-6 border-b">
                 <h2 id="five-vs-heading" class="text-xl font-semibold text-gray-800 mb-4">The 5 Vs of Big Data Revisited</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4" aria-labelledby="five-vs-heading">
+                <p class="text-sm text-gray-600" aria-labelledby="five-vs-heading">Challenges driving evolution (tied to paper's Big Data context, pp. 27-28):</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="volume-2" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Volume</h3>
-                        <p class="text-sm text-gray-600">Handling massive data scales beyond traditional RDBMS.</p>
+                        <p class="text-sm text-gray-600">Massive scales beyond RDBMS (addressed by lakes/lakehouses).</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="zap" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Velocity</h3>
-                        <p class="text-sm text-gray-600">Real-time processing demands.</p>
+                        <p class="text-sm text-gray-600">Real-time needs (NoSQL strength).</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="shuffle" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Variety</h3>
-                        <p class="text-sm text-gray-600">Structured, semi-structured, unstructured data.</p>
+                        <p class="text-sm text-gray-600">Unstructured data (NoSQL/lakes).</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="check-circle" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Veracity</h3>
-                        <p class="text-sm text-gray-600">Data quality and trustworthiness.</p>
+                        <p class="text-sm text-gray-600">Quality/trust (lakehouse governance).</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="dollar-sign" class="text-primary-500" aria-hidden="true"></i>
                         <h3 class="font-medium mt-2">Value</h3>
-                        <p class="text-sm text-gray-600">Extracting insights efficiently.</p>
+                        <p class="text-sm text-gray-600">Efficient insights (cloud elasticity).</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Kleppmann Summary -->
+            <!-- Lessons Learned from the Paper -->
             <div class="p-6 border-b">
-                <h2 id="kleppmann-heading" class="text-xl font-semibold text-gray-800 mb-4">Key Concepts from Kleppmann Ch. 1-3</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="kleppmann-heading">Summary of "Designing Data-Intensive Applications" chapters:</p>
+                <h2 id="lessons-heading" class="text-xl font-semibold text-gray-800 mb-4">Lessons Learned</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="lessons-heading">From Stonebraker & Pavlo (pp. 21-32):</p>
                 <ul class="text-sm text-gray-600 mt-4 list-disc pl-4">
-                    <li>Ch. 1: Reliability, scalability, maintainability as core goals.</li>
-                    <li>Ch. 2: Data models (relational vs. document vs. graph) and query languages.</li>
-                    <li>Ch. 3: Storage engines (log-structured vs. page-oriented) and indexing.</li>
+                    <li>Innovation cycles: Alternatives converge to SQL/RM; good ideas absorbed (e.g., JSON in SQL).</li>
+                    <li>Hardware-driven progress: Columnar storage, cloud, accelerators.</li>
+                    <li>Niches persist: Graph/vector as extensions in RDBMS.</li>
+                    <li>Cloud/open standards: Shared-disk revival, interoperability.</li>
+                    <li>Hype caution: Marketing succeeds but engineering debt accumulates; migration risks limit NewSQL.</li>
+                    <li>Future: Evolve with ML/AI, self-driving features.</li>
                 </ul>
-                <p class="text-sm text-gray-600 mt-4">Key takeaway: Choose data models based on application needs, not hype.</p>
             </div>
 
             <!-- Linux Toolbox -->

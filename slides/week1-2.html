@@ -96,6 +96,9 @@
                     <li>Discover how lakehouses combine the best of lakes and warehouses.</li>
                 </ul>
                 <p class="text-sm text-gray-600 mt-4">Reference: <a href="https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf" class="text-primary-500">Stonebraker & Pavlo (2024)</a></p>
+
+<grok-card data-id="264cf4" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 3: Evolution Timeline -->
@@ -144,6 +147,9 @@
                         </div>
                     </div>
                 </div>
+
+<grok-card data-id="cb0866" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 4: RDBMS Genealogy Timeline -->
@@ -272,6 +278,69 @@
                 <p class="text-sm text-gray-600 mt-2">Family Tree Branches: System R (IBM, Oracle, SQL Server, Sybase, Teradata); Ingres (PostgreSQL, CockroachDB, etc.).</p>
             </div>
 
+            <!-- Slide 5: SQL Standards Evolution Timeline -->
+            <div id="slide5" class="slide p-6 border-b">
+                <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution Timeline</h2>
+                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Visual timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
+                <div class="relative border-l border-gray-200 ml-4 mt-6">
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1970-1979</time>
+                            <p class="text-sm text-gray-600">Codd's relational model; SEQUEL at IBM; first commercial: IBM System/38, Oracle V2.</p>
+                        </div>
+                    </div>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1986</time>
+                            <p class="text-sm text-gray-600">SQL-86: First ANSI standard.</p>
+                        </div>
+                    </div>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1992</time>
+                            <p class="text-sm text-gray-600">SQL-92: Major revision with entry-level features widely implemented.</p>
+                        </div>
+                    </div>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">1999</time>
+                            <p class="text-sm text-gray-600">SQL:1999: Regular expressions, recursive queries, triggers, object-oriented features.</p>
+                        </div>
+                    </div>
+                    <div class="mb-10 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2016</time>
+                            <p class="text-sm text-gray-600">SQL:2016: Row pattern matching, JSON operations (aligns with NoSQL convergence).</p>
+                        </div>
+                    </div>
+                    <div class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
+                            <i data-feather="code" class="text-primary-500 w-3 h-3"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <time class="mb-1 text-sm font-normal leading-none text-gray-400">2023</time>
+                            <p class="text-sm text-gray-600">SQL:2023: JSON data type, Property Graph Queries (SQL/PGQ).</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-4">Historical Context: Evolved from SQUARE to SEQUEL; standardized by ANSI/ISO. As of 2025, no new standards beyond SQL:2023.</p>
+            </div>
+
             <!-- Slide 7: NoSQL Evolution Timeline -->
             <div id="slide7" class="slide p-6 border-b">
                 <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution Timeline</h2>
@@ -312,18 +381,27 @@
             <div id="slide8" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Why RDBMS Struggled with Scale and Variety</h2>
                 <p class="text-sm text-gray-600">Traditional RDBMS faced limitations in scaling for big data due to inability to distribute workloads across machines natively, leading to the rise of NoSQL (p. 29). They struggled with "one shot" tasks like text processing and ETL, requiring schema loading upfront (p. 22). Additionally, handling arrays and diverse data types was inefficient despite extensions like SQL/MDA (p. 25). Vertical scaling was insufficient due to cost and complexity. RDBMS also struggled with unstructured data variety and high velocity. They excel at consistency but struggle with high write throughput in OLTP contexts.</p>
+
+<grok-card data-id="9a692a" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 9: NoSQL Trade-offs and Data Lakes Flexibility -->
             <div id="slide9" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">NoSQL Trade-offs and Data Lakes Flexibility</h2>
                 <p class="text-sm text-gray-600">NoSQL prioritized scalability and flexibility over relational integrity, offering weaker consistency (BASE) and no initial ACID, leading to duplicated data and denormalization issues (p. 23). By late 2010s, most added SQL and ACID, converging with RDBMS. NoSQL handles unstructured/semi-structured data flexibly but trades consistency for scalability. Data lakes allow flexible storage without schema enforcement, using open formats for schema-on-read (p. 28). They support dynamic workloads and cloud-native deployments but introduce governance challenges.</p>
+
+<grok-card data-id="3d742d" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 10: How Lakehouses Combine Lakes and Warehouses -->
             <div id="slide10" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">How Lakehouses Combine Lakes and Warehouses</h2>
                 <p class="text-sm text-gray-600">Lakehouses unify lakes' flexibility with warehouses' governance/performance, supporting SQL/non-SQL on object stores with open formats like Parquet/ORC (p. 28). They add ACID via middleware (Delta Lake, Iceberg, Hudi) for transactions/versioning (p. 28). Scalability via cloud elasticity and disaggregated storage; governance with metadata/caching (p. 28). Combines warehouses' reliability/performance with lakes' scalability/cost. Enables BI/ML on all data with open management. Unifies low-cost open storage with structured querying. Hybrid architecture for expansive storage with structure.</p>
+
+<grok-card data-id="53dfc2" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 11: The 5 Vs of Big Data Revisited -->
@@ -371,6 +449,40 @@
                     <li>Hype caution: Marketing succeeds but engineering debt accumulates; migration risks limit NewSQL.</li>
                     <li>Future: Evolve with ML/AI, self-driving features.</li>
                 </ul>
+                <table class="w-full text-sm text-left text-gray-500 border-collapse border border-gray-200 mt-4">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 border border-gray-200">Lesson</th>
+                            <th class="px-6 py-3 border border-gray-200">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-6 py-4 border border-gray-200">Innovation cycles</td>
+                            <td class="px-6 py-4 border border-gray-200">Alternatives converge to SQL/RM; good ideas absorbed (e.g., JSON in SQL).</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 border border-gray-200">Hardware-driven progress</td>
+                            <td class="px-6 py-4 border border-gray-200">Columnar storage, cloud, accelerators.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border border-gray-200">Niches persist</td>
+                            <td class="px-6 py-4 border border-gray-200">Graph/vector as extensions in RDBMS.</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 border border-gray-200">Cloud/open standards</td>
+                            <td class="px-6 py-4 border border-gray-200">Shared-disk revival, interoperability.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 border border-gray-200">Hype caution</td>
+                            <td class="px-6 py-4 border border-gray-200">Marketing succeeds but engineering debt accumulates; migration risks limit NewSQL.</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 border border-gray-200">Future</td>
+                            <td class="px-6 py-4 border border-gray-200">Evolve with ML/AI, self-driving features.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- Slide 13: Linux Toolbox -->
@@ -405,6 +517,9 @@ echo "Hello, Data World!"</code></pre>
                         <pre><code class="language-bash">systemctl status</code></pre>
                     </div>
                 </div>
+
+<grok-card data-id="5aa440" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 14: Hands-on Lab -->
@@ -419,11 +534,17 @@ echo "Hello, Data World!"</code></pre>
                     <li>Test: Run a container and process sample data.</li>
                 </ol>
                 <p class="text-sm text-gray-600 mt-4">Deliverable: Screenshot of your setup and a simple bash script.</p>
+
+<grok-card data-id="677aa9" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 15: Chapter 1 Introduction -->
             <div id="slide15" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Chapter 1: Introduction</h2>
+
+<grok-card data-id="51ac6f" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 16: Database Applications Examples (Part 1) -->
@@ -443,6 +564,9 @@ echo "Hello, Data World!"</code></pre>
                     <li>Finance: sales and purchases of financial instruments (e.g., stocks and bonds; storing real-time market data</li>
                 </ul>
                 <p class="text-sm text-gray-600">Universities: registration, grades</p>
+
+<grok-card data-id="eca687" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 17: Database Applications Examples (Part 2) -->
@@ -457,6 +581,9 @@ echo "Hello, Data World!"</code></pre>
                 </ul>
                 <p class="text-sm text-gray-600">Document databases</p>
                 <p class="text-sm text-gray-600">Navigation systems: For maintaining the locations of varies places of interest along with the exact routes of roads, train systems, buses, etc.</p>
+
+<grok-card data-id="8eadbf" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 18: Chapter 2 Intro to Relational Model Outline -->
@@ -470,6 +597,9 @@ echo "Hello, Data World!"</code></pre>
                     <li>Relational Query Languages</li>
                     <li>The Relational Algebra</li>
                 </ul>
+
+<grok-card data-id="bd4be8" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 19: Example of Instructor Relation -->
@@ -477,6 +607,9 @@ echo "Hello, Data World!"</code></pre>
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Example of Instructor Relation</h2>
                 <p class="text-sm text-gray-600">attributes (or columns)</p>
                 <p class="text-sm text-gray-600">tuples (or rows)</p>
+
+<grok-card data-id="c27013" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 20: Relational Model Attribute -->
@@ -486,6 +619,9 @@ echo "Hello, Data World!"</code></pre>
                 <p class="text-sm text-gray-600">Attribute values are (normally) required to be atomic; that is, indivisible</p>
                 <p class="text-sm text-gray-600">The special value null is a member of every domain. Indicated that the value is “unknown”</p>
                 <p class="text-sm text-gray-600">The null value causes complications in the definition of many operations</p>
+
+<grok-card data-id="0067ab" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 21: Employee Database Diagram -->
@@ -494,6 +630,9 @@ echo "Hello, Data World!"</code></pre>
                 <p class="text-sm text-gray-600">employee (person_name, street, city)</p>
                 <p class="text-sm text-gray-600">works (person_name, company_name, salary)</p>
                 <p class="text-sm text-gray-600">company (company_name, city)</p>
+
+<grok-card data-id="a4090d" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Slide 22: Practice Exercises from Chapter 1 -->
@@ -524,153 +663,54 @@ echo "Hello, Data World!"</code></pre>
             <!-- Slide 24: 1.4 Database Applications Examples -->
             <div id="slide24" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.4 Database Applications Examples</h2>
-                <p class="text-sm text-gray-600">Enterprise Information</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Sales: customers, products, purchases</li>
-                    <li>Accounting: payments, receipts, assets</li>
-                    <li>Human Resources: Information about employees, salaries, payroll taxes.</li>
-                    <li>Manufacturing: management of production, inventory, orders, supply chain.</li>
-                </ul>
-                <p class="text-sm text-gray-600">Banking and finance</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>customer information, accounts, loans, and banking transactions.</li>
-                    <li>Credit card transactions</li>
-                    <li>Finance: sales and purchases of financial instruments (e.g., stocks and bonds; storing real-time market data</li>
-                </ul>
-                <p class="text-sm text-gray-600">Universities: registration, grades</p>
+                <p class="text-sm text-gray-600">Main Text: Enterprise Information • Sales: customers, products, purchases • Accounting: payments, receipts, assets • Human Resources: Information about employees, salaries, payroll taxes. • Manufacturing: management of production, inventory, orders, supply chain. • Banking and finance • customer information, accounts, loans, and banking transactions. • Credit card transactions • Finance: sales and purchases of financial instruments (e.g., stocks and bonds; storing real-time market data  Universities: registration, grades</p>
             </div>
 
             <!-- Slide 25: 1.5 Database Applications Examples (Cont.) -->
             <div id="slide25" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.5 Database Applications Examples (Cont.)</h2>
-                <p class="text-sm text-gray-600">Airlines: reservations, schedules</p>
-                <p class="text-sm text-gray-600">Telecommunication: records of calls, texts, and data usage, generating monthly bills, maintaining balances on prepaid calling cards</p>
-                <p class="text-sm text-gray-600">Web-based services</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Online retailers: order tracking, customized recommendations</li>
-                    <li>Online advertisements</li>
-                </ul>
-                <p class="text-sm text-gray-600">Document databases</p>
-                <p class="text-sm text-gray-600">Navigation systems: For maintaining the locations of varies places of interest along with the exact routes of roads, train systems, buses, etc.</p>
+                <p class="text-sm text-gray-600">Main Text: Airlines: reservations, schedules  Telecommunication: records of calls, texts, and data usage, generating monthly bills, maintaining balances on prepaid calling cards  Web-based services • Online retailers: order tracking, customized recommendations • Online advertisements  Document databases  Navigation systems: For maintaining the locations of varies places of interest along with the exact routes of roads, train systems, buses, etc.</p>
             </div>
 
             <!-- Slide 26: 1.6 Purpose of Database Systems -->
             <div id="slide26" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.6 Purpose of Database Systems</h2>
-                <p class="text-sm text-gray-600">In the early days, database applications were built directly on top of file systems, which leads to:</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Data redundancy and inconsistency: data is stored in multiple file formats resulting in duplication of information in different files</li>
-                    <li>Difficulty in accessing data</li>
-                    <li>Need to write a new program to carry out each new task</li>
-                    <li>Data isolation</li>
-                    <li>Multiple files and formats</li>
-                    <li>Integrity problems</li>
-                    <li>Integrity constraints (e.g., account balance > 0) become “buried” in program code rather than being stated explicitly</li>
-                    <li>Hard to add new constraints or change existing ones</li>
-                </ul>
+                <p class="text-sm text-gray-600">Main Text: In the early days, database applications were built directly on top of file systems, which leads to:  Data redundancy and inconsistency: data is stored in multiple file formats resulting induplication of information in different files  Difficulty in accessing data • Need to write a new program to carry out each new task  Data isolation • Multiple files and formats  Integrity problems • Integrity constraints (e.g., account balance > 0) become “ buried ” in program code rather than being stated explicitly • Hard to add new constraints or change existing ones</p>
             </div>
 
             <!-- Slide 27: 1.7 Purpose of Database Systems (Cont.) -->
             <div id="slide27" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.7 Purpose of Database Systems (Cont.)</h2>
-                <p class="text-sm text-gray-600">Atomicity of updates</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Failures may leave database in an inconsistent state with partial updates carried out</li>
-                    <li>Example: Transfer of funds from one account to another should either complete or not happen at all</li>
-                </ul>
-                <p class="text-sm text-gray-600">Concurrent access by multiple users</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Concurrent access needed for performance</li>
-                    <li>Uncontrolled concurrent accesses can lead to inconsistencies</li>
-                    <li>Ex: Two people reading a balance (say 100) and updating it by withdrawing money (say 50 each) at the same time</li>
-                </ul>
-                <p class="text-sm text-gray-600">Security problems</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Hard to provide user access to some, but not all, data</li>
-                </ul>
-                <p class="text-sm text-gray-600">Database systems offer solutions to all the above problems</p>
+                <p class="text-sm text-gray-600">Main Text:  Atomicity of updates • Failures may leave database in an inconsistent state with partial updates carried out • Example: Transfer of funds from one account to another should either complete or not happen at all  Concurrent access by multiple users • Concurrent access needed for performance • Uncontrolled concurrent accesses can lead to inconsistencies  Ex: Two people reading a balance (say 100) and updating it by withdrawing money (say 50 each) at the same time  Security problems • Hard to provide user access to some, but not all, data Database systems offer solutions to all the above problems</p>
             </div>
 
             <!-- Slide 28: 1.10 Data Models -->
             <div id="slide28" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.10 Data Models</h2>
-                <p class="text-sm text-gray-600">A collection of tools for describing</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Data</li>
-                    <li>Data relationships</li>
-                    <li>Data semantics</li>
-                    <li>Data constraints</li>
-                </ul>
-                <p class="text-sm text-gray-600">Relational model</p>
-                <p class="text-sm text-gray-600">Entity-Relationship data model (mainly for database design)</p>
-                <p class="text-sm text-gray-600">Object-based data models (Object-oriented and Object-relational)</p>
-                <p class="text-sm text-gray-600">Semi-structured data model (XML)</p>
-                <p class="text-sm text-gray-600">Other older models:</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Network model</li>
-                    <li>Hierarchical model</li>
-                </ul>
+                <p class="text-sm text-gray-600">Main Text:  A collection of tools for describing • Data • Data relationships • Data semantics • Data constraints  Relational model  Entity-Relationship data model (mainly for database design)  Object-based data models (Object-oriented and Object-relational)  Semi-structured data model (XML)  Other older models: • Network model • Hierarchical model</p>
             </div>
 
             <!-- Slide 29: 1.11 Relational Model -->
             <div id="slide29" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.11 Relational Model</h2>
-                <p class="text-sm text-gray-600">All the data is stored in various tables.</p>
-                <p class="text-sm text-gray-600">Example of tabular data in the relational model</p>
-                <table class="w-full text-sm text-left text-gray-600 border-collapse border border-gray-300">
-                    <thead>
-                        <tr>
-                            <th class="border border-gray-300 px-4 py-2">Ted</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 px-4 py-2">Codd</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-4 py-2">Turing Award</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-4 py-2">1981</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-<grok-card data-id="995975" data-type="image_card"></grok-card>
-
+                <p class="text-sm text-gray-600">Main Text:  All the data is stored in various tables.  Example of tabular data in the relational model Columns Rows Ted Codd Turing Award 1981</p>
             </div>
 
             <!-- Slide 30: 1.12 A Sample Relational Database -->
             <div id="slide30" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.12 A Sample Relational Database</h2>
-
-<grok-card data-id="3281dd" data-type="image_card"></grok-card>
-
             </div>
 
             <!-- Slide 31: 1.14 View of Data -->
             <div id="slide31" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.14 View of Data</h2>
-                <p class="text-sm text-gray-600">An architecture for a database system</p>
-
-<grok-card data-id="706258" data-type="image_card"></grok-card>
-
+                <p class="text-sm text-gray-600">Main Text: An architecture for a database system</p>
             </div>
 
             <!-- Slide 32: 1.15 Instances and Schemas -->
             <div id="slide32" class="slide p-6">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">1.15 Instances and Schemas</h2>
-                <p class="text-sm text-gray-600">Similar to types and variables in programming languages</p>
-                <p class="text-sm text-gray-600">Logical Schema – the overall logical structure of the database</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Example: The database consists of information about a set of customers and accounts in a bank and the relationship between them</li>
-                    <li>Analogous to type information of a variable in a program</li>
-                </ul>
-                <p class="text-sm text-gray-600">Physical schema – the overall physical structure of the database</p>
-                <p class="text-sm text-gray-600">Instance – the actual content of the database at a particular point in time</p>
-                <ul class="text-sm text-gray-600 list-disc pl-4">
-                    <li>Analogous to the value of a variable</li>
-                </ul>
+                <p class="text-sm text-gray-600">Main Text:  Similar to types and variables in programming languages  Logical Schema – the overall logical structure of the database • Example: The database consists of information about a set of customers and accounts in a bank and the relationship between them  Analogous to type information of a variable in a program  Physical schema – the overall physical structure of the database  Instance – the actual content of the database at a particular point in time • Analogous to the value of a variable</p>
             </div>
 
             <!-- Navigation Buttons -->

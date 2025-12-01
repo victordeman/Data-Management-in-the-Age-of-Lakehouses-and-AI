@@ -49,18 +49,35 @@
             <div id="slide1" class="slide p-6 bg-gradient-to-r from-primary-500 to-secondary-500" role="banner">
                 <h1 class="text-3xl font-bold text-white">Week 1-2: Why Traditional Data Management Broke & What Replaced It</h1>
                 <p class="text-white mt-2">From RDBMS → NoSQL → data lakes → lakehouse paradigm</p>
+                <div class="mt-4">
+                    <h2 class="text-lg font-semibold text-white mb-2">Sub-Pages</h2>
+                    <ul class="text-sm text-white list-disc pl-4">
+                        <li><a href="#slide2" class="text-secondary-300 hover:text-white">Lecture Overview</a></li>
+                        <li><a href="#slide3" class="text-secondary-300 hover:text-white">Evolution Timeline</a></li>
+                        <li><a href="#slide4" class="text-secondary-300 hover:text-white">RDBMS Genealogy Timeline</a></li>
+                        <li><a href="#slide5" class="text-secondary-300 hover:text-white">SQL Standards Evolution Timeline</a></li>
+                        <li><a href="#slide6" class="text-secondary-300 hover:text-white">NoSQL Evolution Timeline</a></li>
+                        <li><a href="#slide7" class="text-secondary-300 hover:text-white">Why RDBMS Struggled with Scale and Variety</a></li>
+                        <li><a href="#slide8" class="text-secondary-300 hover:text-white">NoSQL Trade-offs and Data Lakes Flexibility</a></li>
+                        <li><a href="#slide9" class="text-secondary-300 hover:text-white">How Lakehouses Combine Lakes and Warehouses</a></li>
+                        <li><a href="#slide10" class="text-secondary-300 hover:text-white">The 5 Vs of Big Data Revisited</a></li>
+                        <li><a href="#slide11" class="text-secondary-300 hover:text-white">Lessons Learned</a></li>
+                        <li><a href="#slide12" class="text-secondary-300 hover:text-white">Linux Data Toolbox</a></li>
+                        <li><a href="#slide13" class="text-secondary-300 hover:text-white">Hands-on Lab</a></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Slide 2: Lecture Overview -->
             <div id="slide2" class="slide p-6 border-b">
                 <h2 id="overview-heading" class="text-xl font-semibold text-gray-800 mb-4">Lecture Overview</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="overview-heading">This week explores the evolution of data management systems, the challenges of traditional approaches, and the emergence of modern paradigms. We'll revisit the 5 Vs of Big Data and draw from the 2024 paper "What Goes Around Comes Around... And Around..." by Michael Stonebraker and Andrew Pavlo (Carnegie Mellon University), focusing on RDBMS adaptations, NoSQL convergence, and lakehouses.<grok-card data-id="ada4b7" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600" aria-labelledby="overview-heading">This week explores the evolution of data management systems, the challenges of traditional approaches, and the emergence of modern paradigms. We'll revisit the 5 Vs of Big Data and draw from the 2024 paper "What Goes Around Comes Around... And Around..." by Michael Stonebraker and Andrew Pavlo (Carnegie Mellon University), focusing on RDBMS adaptations, NoSQL convergence, and lakehouses.</p>
                 <ul class="text-sm text-gray-600 mt-4 list-disc pl-4">
                     <li>Understand why RDBMS struggled with scale and variety.</li>
                     <li>Learn about NoSQL's trade-offs and data lakes' flexibility.</li>
                     <li>Discover how lakehouses combine the best of lakes and warehouses.</li>
                 </ul>
-                <p class="text-sm text-gray-600 mt-4">Reference: <a href="https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf" class="text-primary-500">Stonebraker & Pavlo (2024)</a><grok-card data-id="39fa6e" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600 mt-4">Reference: <a href="https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf" class="text-primary-500">Stonebraker & Pavlo (2024)</a></p>
             </div>
 
             <!-- Slide 3: Evolution Timeline -->
@@ -75,7 +92,7 @@
                         <div class="flex flex-col">
                             <time class="mb-1 text-sm font-normal leading-none text-gray-400">1970s-2000s</time>
                             <h3 class="text-lg font-semibold text-gray-900">RDBMS Era</h3>
-                            <p class="text-sm text-gray-600">Structured data with SQL and ACID, but limited scalability for big data (Stonebraker & Pavlo, pp. 21-22). Dominance of relational model absorbing alternatives.<grok-card data-id="6f18e8" data-type="citation_card"></grok-card></p>
+                            <p class="text-sm text-gray-600">Structured data with SQL and ACID, but limited scalability for big data (Stonebraker & Pavlo, pp. 21-22). Dominance of relational model absorbing alternatives.</p>
                         </div>
                     </div>
                     <div class="mb-10 ml-6">
@@ -85,7 +102,7 @@
                         <div class="flex flex-col">
                             <time class="mb-1 text-sm font-normal leading-none text-gray-400">2000s</time>
                             <h3 class="text-lg font-semibold text-gray-900">NoSQL Rise</h3>
-                            <p class="text-sm text-gray-600">Addressed RDBMS scalability; features like JSON, BASE consistency (pp. 23-24). Convergence as NoSQL adds SQL-like interfaces.<grok-card data-id="22fbd5" data-type="citation_card"></grok-card></p>
+                            <p class="text-sm text-gray-600">Addressed RDBMS scalability; features like JSON, BASE consistency (pp. 23-24). Convergence as NoSQL adds SQL-like interfaces.</p>
                         </div>
                     </div>
                     <div class="mb-10 ml-6">
@@ -95,7 +112,7 @@
                         <div class="flex flex-col">
                             <time class="mb-1 text-sm font-normal leading-none text-gray-400">2010s</time>
                             <h3 class="text-lg font-semibold text-gray-900">Data Lakes</h3>
-                            <p class="text-sm text-gray-600">Cheap raw storage in cloud object stores, but lacked governance (pp. 27-28).<grok-card data-id="c35b0d" data-type="citation_card"></grok-card></p>
+                            <p class="text-sm text-gray-600">Cheap raw storage in cloud object stores, but lacked governance (pp. 27-28).</p>
                         </div>
                     </div>
                     <div class="ml-6">
@@ -105,7 +122,7 @@
                         <div class="flex flex-col">
                             <time class="mb-1 text-sm font-normal leading-none text-gray-400">2020s+</time>
                             <h3 class="text-lg font-semibold text-gray-900">Lakehouse Paradigm</h3>
-                            <p class="text-sm text-gray-600">Unifies lakes with ACID, open formats (e.g., Delta Lake, Iceberg); cloud-driven elasticity (p. 28).<grok-card data-id="d31684" data-type="citation_card"></grok-card></p>
+                            <p class="text-sm text-gray-600">Unifies lakes with ACID, open formats (e.g., Delta Lake, Iceberg); cloud-driven elasticity (p. 28).</p>
                         </div>
                     </div>
                 </div>
@@ -237,10 +254,10 @@
                 <p class="text-sm text-gray-600 mt-2">Family Tree Branches: System R (IBM, Oracle, SQL Server, Sybase, Teradata); Ingres (PostgreSQL, CockroachDB, etc.).</p>
             </div>
 
-            <!-- Slide 5: SQL Standards Evolution Timeline -->
-            <div id="slide5" class="slide p-6 border-b">
+            <!-- Slide 6: SQL Standards Evolution Timeline -->
+            <div id="slide6" class="slide p-6 border-b">
                 <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution Timeline</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Visual timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):<grok-card data-id="c04fac" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Visual timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
                 <div class="relative border-l border-gray-200 ml-4 mt-6">
                     <div class="mb-10 ml-6">
                         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
@@ -300,10 +317,10 @@
                 <p class="text-sm text-gray-600 mt-4">Historical Context: Evolved from SQUARE to SEQUEL; standardized by ANSI/ISO. As of 2025, no new standards beyond SQL:2023.</p>
             </div>
 
-            <!-- Slide 6: NoSQL Evolution Timeline -->
-            <div id="slide6" class="slide p-6 border-b">
+            <!-- Slide 7: NoSQL Evolution Timeline -->
+            <div id="slide7" class="slide p-6 border-b">
                 <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution Timeline</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Visual timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):<grok-card data-id="5448d3" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Visual timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):</p>
                 <div class="relative border-l border-gray-200 ml-4 mt-6">
                     <div class="mb-10 ml-6">
                         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -left-3 ring-8 ring-white">
@@ -336,28 +353,28 @@
                 <p class="text-sm text-gray-600 mt-4">Categories: Key-value (Redis), Document (MongoDB, CouchDB), Wide-column (Cassandra), Graph (Neo4j). Rise: Handled unstructured data, scale; trends: Edge computing, serverless, SQL/NoSQL blur.</p>
             </div>
 
-            <!-- Slide 7: RDBMS Struggles with Scale and Variety -->
-            <div id="slide7" class="slide p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Why RDBMS Struggled with Scale and Variety</h2>
-                <p class="text-sm text-gray-600">Traditional RDBMS faced limitations in scaling for big data due to inability to distribute workloads across machines natively, leading to the rise of NoSQL (p. 29).<grok-card data-id="67ef29" data-type="citation_card"></grok-card> They struggled with "one shot" tasks like text processing and ETL, requiring schema loading upfront (p. 22).<grok-card data-id="daeca4" data-type="citation_card"></grok-card> Additionally, handling arrays and diverse data types was inefficient despite extensions like SQL/MDA (p. 25).<grok-card data-id="9c427c" data-type="citation_card"></grok-card> Vertical scaling was insufficient due to cost and complexity.<grok-card data-id="7808a2" data-type="citation_card"></grok-card> RDBMS also struggled with unstructured data variety and high velocity.<grok-card data-id="b3a600" data-type="citation_card"></grok-card><grok-card data-id="c6499c" data-type="citation_card"></grok-card> They excel at consistency but struggle with high write throughput in OLTP contexts.<grok-card data-id="12580e" data-type="citation_card"></grok-card></p>
-            </div>
-
-            <!-- Slide 8: NoSQL Trade-offs and Data Lakes Flexibility -->
+            <!-- Slide 8: Why RDBMS Struggled with Scale and Variety -->
             <div id="slide8" class="slide p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">NoSQL Trade-offs and Data Lakes Flexibility</h2>
-                <p class="text-sm text-gray-600">NoSQL prioritized scalability and flexibility over relational integrity, offering weaker consistency (BASE) and no initial ACID, leading to duplicated data and denormalization issues (p. 23).<grok-card data-id="3b7c60" data-type="citation_card"></grok-card> By late 2010s, most added SQL and ACID, converging with RDBMS.<grok-card data-id="a24dfa" data-type="citation_card"></grok-card> NoSQL handles unstructured/semi-structured data flexibly but trades consistency for scalability.<grok-card data-id="f38532" data-type="citation_card"></grok-card><grok-card data-id="438a76" data-type="citation_card"></grok-card> Data lakes allow flexible storage without schema enforcement, using open formats for schema-on-read (p. 28).<grok-card data-id="ee7378" data-type="citation_card"></grok-card> They support dynamic workloads and cloud-native deployments but introduce governance challenges.<grok-card data-id="3b8fa0" data-type="citation_card"></grok-card><grok-card data-id="848efd" data-type="citation_card"></grok-card><grok-card data-id="6ecf9e" data-type="citation_card"></grok-card></p>
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Why RDBMS Struggled with Scale and Variety</h2>
+                <p class="text-sm text-gray-600">Traditional RDBMS faced limitations in scaling for big data due to inability to distribute workloads across machines natively, leading to the rise of NoSQL (p. 29). They struggled with "one shot" tasks like text processing and ETL, requiring schema loading upfront (p. 22). Additionally, handling arrays and diverse data types was inefficient despite extensions like SQL/MDA (p. 25). Vertical scaling was insufficient due to cost and complexity. RDBMS also struggled with unstructured data variety and high velocity. They excel at consistency but struggle with high write throughput in OLTP contexts.</p>
             </div>
 
-            <!-- Slide 9: How Lakehouses Combine Lakes and Warehouses -->
+            <!-- Slide 9: NoSQL Trade-offs and Data Lakes Flexibility -->
             <div id="slide9" class="slide p-6 border-b">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">How Lakehouses Combine Lakes and Warehouses</h2>
-                <p class="text-sm text-gray-600">Lakehouses unify lakes' flexibility with warehouses' governance/performance, supporting SQL/non-SQL on object stores with open formats like Parquet/ORC (p. 28).<grok-card data-id="2b44b3" data-type="citation_card"></grok-card> They add ACID via middleware (Delta Lake, Iceberg, Hudi) for transactions/versioning (p. 28).<grok-card data-id="ad4100" data-type="citation_card"></grok-card> Scalability via cloud elasticity and disaggregated storage; governance with metadata/caching (p. 28).<grok-card data-id="6c9611" data-type="citation_card"></grok-card> Combines warehouses' reliability/performance with lakes' scalability/cost.<grok-card data-id="61e8f9" data-type="citation_card"></grok-card> Enables BI/ML on all data with open management.<grok-card data-id="f69cc4" data-type="citation_card"></grok-card> Unifies low-cost open storage with structured querying.<grok-card data-id="380433" data-type="citation_card"></grok-card> Hybrid architecture for expansive storage with structure.<grok-card data-id="b43f69" data-type="citation_card"></grok-card></p>
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">NoSQL Trade-offs and Data Lakes Flexibility</h2>
+                <p class="text-sm text-gray-600">NoSQL prioritized scalability and flexibility over relational integrity, offering weaker consistency (BASE) and no initial ACID, leading to duplicated data and denormalization issues (p. 23). By late 2010s, most added SQL and ACID, converging with RDBMS. NoSQL handles unstructured/semi-structured data flexibly but trades consistency for scalability. Data lakes allow flexible storage without schema enforcement, using open formats for schema-on-read (p. 28). They support dynamic workloads and cloud-native deployments but introduce governance challenges.</p>
             </div>
 
-            <!-- Slide 10: 5 Vs Revisited -->
+            <!-- Slide 10: How Lakehouses Combine Lakes and Warehouses -->
             <div id="slide10" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">How Lakehouses Combine Lakes and Warehouses</h2>
+                <p class="text-sm text-gray-600">Lakehouses unify lakes' flexibility with warehouses' governance/performance, supporting SQL/non-SQL on object stores with open formats like Parquet/ORC (p. 28). They add ACID via middleware (Delta Lake, Iceberg, Hudi) for transactions/versioning (p. 28). Scalability via cloud elasticity and disaggregated storage; governance with metadata/caching (p. 28). Combines warehouses' reliability/performance with lakes' scalability/cost. Enables BI/ML on all data with open management. Unifies low-cost open storage with structured querying. Hybrid architecture for expansive storage with structure.</p>
+            </div>
+
+            <!-- Slide 11: The 5 Vs of Big Data Revisited -->
+            <div id="slide11" class="slide p-6 border-b">
                 <h2 id="five-vs-heading" class="text-xl font-semibold text-gray-800 mb-4">The 5 Vs of Big Data Revisited</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="five-vs-heading">Challenges driving evolution (tied to paper's Big Data context, pp. 27-28):<grok-card data-id="88fa6b" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600" aria-labelledby="five-vs-heading">Challenges driving evolution (tied to paper's Big Data context, pp. 27-28):</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <i data-feather="volume-2" class="text-primary-500" aria-hidden="true"></i>
@@ -387,10 +404,10 @@
                 </div>
             </div>
 
-            <!-- Slide 11: Lessons Learned from the Paper -->
-            <div id="slide11" class="slide p-6 border-b">
+            <!-- Slide 12: Lessons Learned from the Paper -->
+            <div id="slide12" class="slide p-6 border-b">
                 <h2 id="lessons-heading" class="text-xl font-semibold text-gray-800 mb-4">Lessons Learned</h2>
-                <p class="text-sm text-gray-600" aria-labelledby="lessons-heading">From Stonebraker & Pavlo (pp. 21-32):<grok-card data-id="d2acef" data-type="citation_card"></grok-card></p>
+                <p class="text-sm text-gray-600" aria-labelledby="lessons-heading">From Stonebraker & Pavlo (pp. 21-32):</p>
                 <ul class="text-sm text-gray-600 mt-4 list-disc pl-4">
                     <li>Innovation cycles: Alternatives converge to SQL/RM; good ideas absorbed (e.g., JSON in SQL).</li>
                     <li>Hardware-driven progress: Columnar storage, cloud, accelerators.</li>
@@ -401,8 +418,8 @@
                 </ul>
             </div>
 
-            <!-- Slide 12: Linux Toolbox -->
-            <div id="slide12" class="slide p-6 border-b">
+            <!-- Slide 13: Linux Toolbox -->
+            <div id="slide13" class="slide p-6 border-b">
                 <h2 id="toolbox-heading" class="text-xl font-semibold text-gray-800 mb-4">Linux Data Toolbox</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="toolbox-heading">Essential tools for a Linux-first environment:</p>
                 <div class="mt-4 space-y-4">
@@ -435,8 +452,8 @@ echo "Hello, Data World!"</code></pre>
                 </div>
             </div>
 
-            <!-- Slide 13: Hands-on Lab -->
-            <div id="slide13" class="slide p-6">
+            <!-- Slide 14: Hands-on Lab -->
+            <div id="slide14" class="slide p-6">
                 <h2 id="lab-heading" class="text-xl font-semibold text-gray-800 mb-4">Hands-on: Lab 0 - Personal Linux Data Workstation Setup</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="lab-heading">Set up your environment:</p>
                 <ol class="text-sm text-gray-600 mt-4 list-decimal pl-4">
@@ -493,6 +510,19 @@ echo "Hello, Data World!"</code></pre>
 
         // Show first slide on load
         showSlide(currentSlide);
+
+        // Anchor link handling for sub-pages
+        document.querySelectorAll('a[href^="#slide"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetIndex = Array.from(slides).findIndex(slide => slide.id === targetId);
+                if (targetIndex !== -1) {
+                    currentSlide = targetIndex;
+                    showSlide(currentSlide);
+                }
+            });
+        });
     </script>
 </body>
 </html>

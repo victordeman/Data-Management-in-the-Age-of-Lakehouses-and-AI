@@ -73,6 +73,15 @@
                         <li><a href="#slide20" class="text-secondary-300 hover:text-white">Employee Database Diagram</a></li>
                         <li><a href="#slide21" class="text-secondary-300 hover:text-white">Practice Exercises from Chapter 1</a></li>
                         <li><a href="#slide22" class="text-secondary-300 hover:text-white">Practice Exercises from Chapter 2</a></li>
+                        <li><a href="#slide23" class="text-secondary-300 hover:text-white">1.4 Database Applications Examples</a></li>
+                        <li><a href="#slide24" class="text-secondary-300 hover:text-white">1.5 Database Applications Examples (Cont.)</a></li>
+                        <li><a href="#slide25" class="text-secondary-300 hover:text-white">1.6 Purpose of Database Systems</a></li>
+                        <li><a href="#slide26" class="text-secondary-300 hover:text-white">1.7 Purpose of Database Systems (Cont.)</a></li>
+                        <li><a href="#slide27" class="text-secondary-300 hover:text-white">1.10 Data Models</a></li>
+                        <li><a href="#slide28" class="text-secondary-300 hover:text-white">1.11 Relational Model</a></li>
+                        <li><a href="#slide29" class="text-secondary-300 hover:text-white">1.12 A Sample Relational Database</a></li>
+                        <li><a href="#slide30" class="text-secondary-300 hover:text-white">1.14 View of Data</a></li>
+                        <li><a href="#slide31" class="text-secondary-300 hover:text-white">1.15 Instances and Schemas</a></li>
                     </ul>
                 </div>
             </div>
@@ -478,7 +487,6 @@ echo "Hello, Data World!"</code></pre>
             <!-- Slide 15: Chapter 1 Introduction -->
             <div id="slide15" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Chapter 1: Introduction</h2>
-                <p class="text-sm text-gray-600">Database System Concepts, 7th Ed. ©Silberschatz, Korth and Sudarshan See www.db-book.com for conditions on re-use Chapter 1: Introduction</p>
             </div>
 
             <!-- Slide 16: Database Applications Examples (Part 1) -->
@@ -574,6 +582,86 @@ echo "Hello, Data World!"</code></pre>
                     <li>What is the result of first performing the Cartesian product of student and advisor, and then performing a selection operation on the result with the predicate s id = ID? (Using the symbolic notation of relational algebra, this query can be written as σ s id=ID (student × advisor).)</li>
                     <li>Consider the employee database of Figure 2.17. Give an expression in the relational algebra to express each of the following queries: a. Find the name of each employee who lives in city “Miami”.</li>
                 </ul>
+            </div>
+
+            <!-- Slide 24: 1.4 Database Applications Examples -->
+            <div id="slide24" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.4 Database Applications Examples</h2>
+                <p class="text-sm text-gray-600">Main Text: Enterprise Information • Sales: customers, products, purchases • Accounting: payments, receipts, assets • Human Resources: Information about employees, salaries, payroll taxes. • Manufacturing: management of production, inventory, orders, supply chain. • Banking and finance • customer information, accounts, loans, and banking transactions. • Credit card transactions • Finance: sales and purchases of financial instruments (e.g., stocks and bonds; storing real-time market data  Universities: registration, grades</p>
+
+<grok-card data-id="232ac0" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 25: 1.5 Database Applications Examples (Cont.) -->
+            <div id="slide25" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.5 Database Applications Examples (Cont.)</h2>
+                <p class="text-sm text-gray-600">Main Text: Airlines: reservations, schedules  Telecommunication: records of calls, texts, and data usage, generating monthly bills, maintaining balances on prepaid calling cards  Web-based services • Online retailers: order tracking, customized recommendations • Online advertisements  Document databases  Navigation systems: For maintaining the locations of varies places of interest along with the exact routes of roads, train systems, buses, etc.</p>
+
+<grok-card data-id="cc7445" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 26: 1.6 Purpose of Database Systems -->
+            <div id="slide26" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.6 Purpose of Database Systems</h2>
+                <p class="text-sm text-gray-600">Main Text: In the early days, database applications were built directly on top of file systems, which leads to:  Data redundancy and inconsistency: data is stored in multiple file formats resulting induplication of information in different files  Difficulty in accessing data • Need to write a new program to carry out each new task  Data isolation • Multiple files and formats  Integrity problems • Integrity constraints (e.g., account balance > 0) become “ buried ” in program code rather than being stated explicitly • Hard to add new constraints or change existing ones</p>
+
+<grok-card data-id="1b3d64" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 27: 1.7 Purpose of Database Systems (Cont.) -->
+            <div id="slide27" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.7 Purpose of Database Systems (Cont.)</h2>
+                <p class="text-sm text-gray-600">Main Text:  Atomicity of updates • Failures may leave database in an inconsistent state with partial updates carried out • Example: Transfer of funds from one account to another should either complete or not happen at all  Concurrent access by multiple users • Concurrent access needed for performance • Uncontrolled concurrent accesses can lead to inconsistencies  Ex: Two people reading a balance (say 100) and updating it by withdrawing money (say 50 each) at the same time  Security problems • Hard to provide user access to some, but not all, data Database systems offer solutions to all the above problems</p>
+
+<grok-card data-id="27e74f" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 28: 1.10 Data Models -->
+            <div id="slide28" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.10 Data Models</h2>
+                <p class="text-sm text-gray-600">Main Text:  A collection of tools for describing • Data • Data relationships • Data semantics • Data constraints  Relational model  Entity-Relationship data model (mainly for database design)  Object-based data models (Object-oriented and Object-relational)  Semi-structured data model (XML)  Other older models: • Network model • Hierarchical model</p>
+
+<grok-card data-id="10d007" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 29: 1.11 Relational Model -->
+            <div id="slide29" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.11 Relational Model</h2>
+                <p class="text-sm text-gray-600">Main Text:  All the data is stored in various tables.  Example of tabular data in the relational model Columns Rows Ted Codd Turing Award 1981</p>
+
+<grok-card data-id="f1af65" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 30: 1.12 A Sample Relational Database -->
+            <div id="slide30" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.12 A Sample Relational Database</h2>
+
+<grok-card data-id="4fd63d" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 31: 1.14 View of Data -->
+            <div id="slide31" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.14 View of Data</h2>
+                <p class="text-sm text-gray-600">Main Text: An architecture for a database system</p>
+
+<grok-card data-id="2330d2" data-type="image_card"></grok-card>
+
+            </div>
+
+            <!-- Slide 32: 1.15 Instances and Schemas -->
+            <div id="slide32" class="slide p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">1.15 Instances and Schemas</h2>
+                <p class="text-sm text-gray-600">Main Text:  Similar to types and variables in programming languages  Logical Schema – the overall logical structure of the database • Example: The database consists of information about a set of customers and accounts in a bank and the relationship between them  Analogous to type information of a variable in a program  Physical schema – the overall physical structure of the database  Instance – the actual content of the database at a particular point in time • Analogous to the value of a variable</p>
+
+<grok-card data-id="6140a6" data-type="image_card"></grok-card>
+
             </div>
 
             <!-- Navigation Buttons -->

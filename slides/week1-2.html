@@ -64,6 +64,14 @@
                         <li><a href="#slide11" class="text-secondary-300 hover:text-white">Lessons Learned</a></li>
                         <li><a href="#slide12" class="text-secondary-300 hover:text-white">Linux Data Toolbox</a></li>
                         <li><a href="#slide13" class="text-secondary-300 hover:text-white">Hands-on Lab</a></li>
+                        <li><a href="#slide14" class="text-secondary-300 hover:text-white">Chapter 1 Introduction</a></li>
+                        <li><a href="#slide15" class="text-secondary-300 hover:text-white">Database Applications Examples (Part 1)</a></li>
+                        <li><a href="#slide16" class="text-secondary-300 hover:text-white">Database Applications Examples (Part 2)</a></li>
+                        <li><a href="#slide17" class="text-secondary-300 hover:text-white">Chapter 2 Intro to Relational Model Outline</a></li>
+                        <li><a href="#slide18" class="text-secondary-300 hover:text-white">Example of Instructor Relation</a></li>
+                        <li><a href="#slide19" class="text-secondary-300 hover:text-white">Relational Model Attribute</a></li>
+                        <li><a href="#slide20" class="text-secondary-300 hover:text-white">Practice Exercises from Chapter 1</a></li>
+                        <li><a href="#slide21" class="text-secondary-300 hover:text-white">Practice Exercises from Chapter 2</a></li>
                     </ul>
                 </div>
             </div>
@@ -254,8 +262,8 @@
                 <p class="text-sm text-gray-600 mt-2">Family Tree Branches: System R (IBM, Oracle, SQL Server, Sybase, Teradata); Ingres (PostgreSQL, CockroachDB, etc.).</p>
             </div>
 
-            <!-- Slide 6: SQL Standards Evolution Timeline -->
-            <div id="slide6" class="slide p-6 border-b">
+            <!-- Slide 7: SQL Standards Evolution Timeline -->
+            <div id="slide7" class="slide p-6 border-b">
                 <h2 id="sql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">SQL Standards Evolution Timeline</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="sql-evolution-heading">Visual timeline of SQL standards, rooted in Codd's 1970 model (integrated with paper's note on SQL's persistence and extensions, pp. 21-23):</p>
                 <div class="relative border-l border-gray-200 ml-4 mt-6">
@@ -317,8 +325,8 @@
                 <p class="text-sm text-gray-600 mt-4">Historical Context: Evolved from SQUARE to SEQUEL; standardized by ANSI/ISO. As of 2025, no new standards beyond SQL:2023.</p>
             </div>
 
-            <!-- Slide 7: NoSQL Evolution Timeline -->
-            <div id="slide7" class="slide p-6 border-b">
+            <!-- Slide 8: NoSQL Evolution Timeline -->
+            <div id="slide8" class="slide p-6 border-b">
                 <h2 id="nosql-evolution-heading" class="text-xl font-semibold text-gray-800 mb-4">NoSQL Evolution Timeline</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="nosql-evolution-heading">Visual timeline and categories of NoSQL, emphasizing rise for scalability and convergence with RDBMS (from paper, pp. 23-25):</p>
                 <div class="relative border-l border-gray-200 ml-4 mt-6">
@@ -353,26 +361,26 @@
                 <p class="text-sm text-gray-600 mt-4">Categories: Key-value (Redis), Document (MongoDB, CouchDB), Wide-column (Cassandra), Graph (Neo4j). Rise: Handled unstructured data, scale; trends: Edge computing, serverless, SQL/NoSQL blur.</p>
             </div>
 
-            <!-- Slide 8: Why RDBMS Struggled with Scale and Variety -->
-            <div id="slide8" class="slide p-6 border-b">
+            <!-- Slide 9: Why RDBMS Struggled with Scale and Variety -->
+            <div id="slide9" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Why RDBMS Struggled with Scale and Variety</h2>
                 <p class="text-sm text-gray-600">Traditional RDBMS faced limitations in scaling for big data due to inability to distribute workloads across machines natively, leading to the rise of NoSQL (p. 29). They struggled with "one shot" tasks like text processing and ETL, requiring schema loading upfront (p. 22). Additionally, handling arrays and diverse data types was inefficient despite extensions like SQL/MDA (p. 25). Vertical scaling was insufficient due to cost and complexity. RDBMS also struggled with unstructured data variety and high velocity. They excel at consistency but struggle with high write throughput in OLTP contexts.</p>
             </div>
 
-            <!-- Slide 9: NoSQL Trade-offs and Data Lakes Flexibility -->
-            <div id="slide9" class="slide p-6 border-b">
+            <!-- Slide 10: NoSQL Trade-offs and Data Lakes Flexibility -->
+            <div id="slide10" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">NoSQL Trade-offs and Data Lakes Flexibility</h2>
                 <p class="text-sm text-gray-600">NoSQL prioritized scalability and flexibility over relational integrity, offering weaker consistency (BASE) and no initial ACID, leading to duplicated data and denormalization issues (p. 23). By late 2010s, most added SQL and ACID, converging with RDBMS. NoSQL handles unstructured/semi-structured data flexibly but trades consistency for scalability. Data lakes allow flexible storage without schema enforcement, using open formats for schema-on-read (p. 28). They support dynamic workloads and cloud-native deployments but introduce governance challenges.</p>
             </div>
 
-            <!-- Slide 10: How Lakehouses Combine Lakes and Warehouses -->
-            <div id="slide10" class="slide p-6 border-b">
+            <!-- Slide 11: How Lakehouses Combine Lakes and Warehouses -->
+            <div id="slide11" class="slide p-6 border-b">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">How Lakehouses Combine Lakes and Warehouses</h2>
                 <p class="text-sm text-gray-600">Lakehouses unify lakes' flexibility with warehouses' governance/performance, supporting SQL/non-SQL on object stores with open formats like Parquet/ORC (p. 28). They add ACID via middleware (Delta Lake, Iceberg, Hudi) for transactions/versioning (p. 28). Scalability via cloud elasticity and disaggregated storage; governance with metadata/caching (p. 28). Combines warehouses' reliability/performance with lakes' scalability/cost. Enables BI/ML on all data with open management. Unifies low-cost open storage with structured querying. Hybrid architecture for expansive storage with structure.</p>
             </div>
 
-            <!-- Slide 11: The 5 Vs of Big Data Revisited -->
-            <div id="slide11" class="slide p-6 border-b">
+            <!-- Slide 12: The 5 Vs of Big Data Revisited -->
+            <div id="slide12" class="slide p-6 border-b">
                 <h2 id="five-vs-heading" class="text-xl font-semibold text-gray-800 mb-4">The 5 Vs of Big Data Revisited</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="five-vs-heading">Challenges driving evolution (tied to paper's Big Data context, pp. 27-28):</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -404,8 +412,8 @@
                 </div>
             </div>
 
-            <!-- Slide 12: Lessons Learned from the Paper -->
-            <div id="slide12" class="slide p-6 border-b">
+            <!-- Slide 13: Lessons Learned from the Paper -->
+            <div id="slide13" class="slide p-6 border-b">
                 <h2 id="lessons-heading" class="text-xl font-semibold text-gray-800 mb-4">Lessons Learned</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="lessons-heading">From Stonebraker & Pavlo (pp. 21-32):</p>
                 <ul class="text-sm text-gray-600 mt-4 list-disc pl-4">
@@ -418,8 +426,8 @@
                 </ul>
             </div>
 
-            <!-- Slide 13: Linux Toolbox -->
-            <div id="slide13" class="slide p-6 border-b">
+            <!-- Slide 14: Linux Toolbox -->
+            <div id="slide14" class="slide p-6 border-b">
                 <h2 id="toolbox-heading" class="text-xl font-semibold text-gray-800 mb-4">Linux Data Toolbox</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="toolbox-heading">Essential tools for a Linux-first environment:</p>
                 <div class="mt-4 space-y-4">
@@ -452,8 +460,8 @@ echo "Hello, Data World!"</code></pre>
                 </div>
             </div>
 
-            <!-- Slide 14: Hands-on Lab -->
-            <div id="slide14" class="slide p-6">
+            <!-- Slide 15: Hands-on Lab -->
+            <div id="slide15" class="slide p-6">
                 <h2 id="lab-heading" class="text-xl font-semibold text-gray-800 mb-4">Hands-on: Lab 0 - Personal Linux Data Workstation Setup</h2>
                 <p class="text-sm text-gray-600" aria-labelledby="lab-heading">Set up your environment:</p>
                 <ol class="text-sm text-gray-600 mt-4 list-decimal pl-4">
@@ -464,6 +472,85 @@ echo "Hello, Data World!"</code></pre>
                     <li>Test: Run a container and process sample data.</li>
                 </ol>
                 <p class="text-sm text-gray-600 mt-4">Deliverable: Screenshot of your setup and a simple bash script.</p>
+            </div>
+
+            <!-- Slide 16: Chapter 1 Introduction -->
+            <div id="slide16" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Chapter 1: Introduction</h2>
+
+<grok-card data-id="2c11bb" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">Database System Concepts, 7th Ed. ©Silberschatz, Korth and Sudarshan See www.db-book.com for conditions on re-use Chapter 1: Introduction</p>
+            </div>
+
+            <!-- Slide 17: Database Applications Examples (Part 1) -->
+            <div id="slide17" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Database Applications Examples (Part 1)</h2>
+
+<grok-card data-id="db15d6" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">Enterprise Information • Sales: customers, products, purchases • Accounting: payments, receipts, assets • Human Resources: Information about employees, salaries, payroll taxes. Manufacturing: management of production, inventory, orders, supply chain. Banking and finance • customer information, accounts, loans, and banking transactions. • Credit card transactions • Finance: sales and purchases of financial instruments (e.g., stocks and bonds; storing real-time market data Universities: registration, grades</p>
+            </div>
+
+            <!-- Slide 18: Database Applications Examples (Part 2) -->
+            <div id="slide18" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Database Applications Examples (Part 2)</h2>
+
+<grok-card data-id="9ab6e6" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">Airlines: reservations, schedules Telecommunication: records of calls, texts, and data usage, generating monthly bills, maintaining balances on prepaid calling cards Web-based services • Online retailers: order tracking, customized recommendations • Online advertisements Document databases Navigation systems: For maintaining the locations of varies places of interest along with the exact routes of roads, train systems, buses, etc.</p>
+            </div>
+
+            <!-- Slide 19: Chapter 2 Intro to Relational Model Outline -->
+            <div id="slide19" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Chapter 2: Intro to Relational Model Outline</h2>
+
+<grok-card data-id="e048f8" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">Structure of Relational Databases Database Schema Keys Schema Diagrams Relational Query Languages The Relational Algebra</p>
+            </div>
+
+            <!-- Slide 20: Example of Instructor Relation -->
+            <div id="slide20" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Example of Instructor Relation</h2>
+
+<grok-card data-id="120879" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">attributes (or columns) tuples (or rows)</p>
+            </div>
+
+            <!-- Slide 21: Relational Model Attribute -->
+            <div id="slide21" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Relational Model Attribute</h2>
+
+<grok-card data-id="c86490" data-type="image_card"></grok-card>
+
+                <p class="text-sm text-gray-600">The set of allowed values for each attribute is called the domain of the attribute Attribute values are (normally) required to be atomic; that is, indivisible The special value null is a member of every domain. Indicated that the value is “unknown” The null value causes complications in the definition of many operations</p>
+            </div>
+
+            <!-- Slide 22: Practice Exercises from Chapter 1 -->
+            <div id="slide22" class="slide p-6 border-b">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Practice Exercises from Chapter 1</h2>
+                <ul class="text-sm text-gray-600 list-disc pl-4">
+                    <li>This chapter has described several major advantages of a database system. What are two disadvantages?</li>
+                    <li>List five ways in which the type declaration system of a language such as Java or C++ differs from the data definition language used in a database.</li>
+                    <li>List six major steps that you would take in setting up a database for a particular enterprise.</li>
+                    <li>Suppose you want to build a video site similar to YouTube. Consider each of the points listed in Section 1.2 as disadvantages of keeping data in a file-processing system. Discuss the relevance of each of these points to the storage of actual video data, and to metadata about the video, such as title, the user who uploaded it, tags, and which users viewed it.</li>
+                    <li>Keyword queries used in web search are quite different from database queries. List key differences between the two, in terms of the way the queries are specified and in terms of what is the result of a query.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 23: Practice Exercises from Chapter 2 -->
+            <div id="slide23" class="slide p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Practice Exercises from Chapter 2</h2>
+                <ul class="text-sm text-gray-600 list-disc pl-4">
+                    <li>Consider the employee database of Figure 2.17. What are the appropriate primary keys?</li>
+                    <li>Consider the foreign-key constraint from the dept name attribute of instructor to the department relation. Give examples of inserts and deletes to these relations that can cause a violation of the foreign-key constraint.</li>
+                    <li>Consider the time slot relation. Given that a particular time slot can meet more than once in a week, explain why day and start time are part of the primary key of this relation, while end time is not.</li>
+                    <li>In the instance of instructor shown in Figure 2.1, no two instructors have the same name. From this, can we conclude that name can be used as a superkey (or primary key) of instructor?</li>
+                    <li>What is the result of first performing the Cartesian product of student and advisor, and then performing a selection operation on the result with the predicate s id = ID? (Using the symbolic notation of relational algebra, this query can be written as σ s id=ID (student × advisor).)</li>
+                    <li>Consider the employee database of Figure 2.17. Give an expression in the relational algebra to express each of the following queries: a. Find the name of each employee who lives in city “Miami”.</li>
+                </ul>
             </div>
 
             <!-- Navigation Buttons -->
